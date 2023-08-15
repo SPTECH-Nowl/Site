@@ -31,9 +31,14 @@ Site construido para a o segundo semestre de 2023 da faculdade SPTECH.
 </div>
 
 #
-📌 Andamento.
-🔗 Sem link no momento
-📝 Normas de convivência!
+
+- 📌 Andamento.
+- 🔗 Sem link no momento
+
+
+## 📝 Normas de convivência!
+
+
 As regras de convivências determinadas para a realização deste trabalho foram:
 
 ❗ [x] Determinar dias e horários das reuniões(diárias) de reuniões de Sprint Review/Retrospective, sempre no mesmo horário.
