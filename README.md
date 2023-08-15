@@ -6,16 +6,32 @@ Site construido para a o segundo semestre de 2023 da faculdade SPTECH.
 
 👷🏻‍♂️🔨 Desenvolvido por:
 
-Cauã Gustavo | @h.Cauã Gustavo
-Gabriel Yukio | @****
-Jhulia Cristina | @jhulia-cristina
-Tiago Alves | @tialvesdev
-Will Dantas | @dantaswilljpg
-Yuri Oliveira | @YuriOlivs
-🛠 Ferramentas Utilizadas:
+ -Cauã Gustavo | @h.Cauã Gustavo
 
-Sprint-HTML Sprint-CSS cocoaTechnology-Js Will-mysql Sprinty-node
-📌 Finalizado.
+ -Gabriel Yukio | @****
+
+ -Jhulia Cristina | @jhulia-cristina
+
+ -Tiago Alves | @tialvesdev
+
+ -Will Dantas | @dantaswilljpg
+
+ -Yuri Oliveira | @YuriOlivs
+#
+
+### 🛠 Ferramentas Utilizadas:
+<br>
+
+<div align="center">
+   <img align="center" alt="cocoaTechnology-HTML" height="50" width="60" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
+  <img align="center" alt="cocoaTechnology-CSS" height="50" width="60" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
+  <img align="center" alt="cocoaTechnology-Js" height="50" width="60" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg">
+  <img align="center" alt="Luigi-mysql" height="50" width="60" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg">
+  <img align="center" alt="cocoaTechnology-node" height="50" width="60" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"/>
+</div>
+
+#
+📌 Andamento.
 🔗 Sem link no momento
 📝 Normas de convivência!
 As regras de convivências determinadas para a realização deste trabalho foram:
