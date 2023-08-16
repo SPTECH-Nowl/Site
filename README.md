@@ -8,7 +8,7 @@ Site construido para a o segundo semestre de 2023 da faculdade SPTECH.
 
  -Cauã Gustavo | @h.Cauã Gustavo
 
- -Gabriel Yukio | @****
+ -Gabriel Yukio | @GabrielYukioMC
 
  -Jhulia Cristina | @jhulia-cristina
 
