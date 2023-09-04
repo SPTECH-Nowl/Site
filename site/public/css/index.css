@@ -1,3 +1,17 @@
+/* Import Fontes */
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Raleway:wght@300;400;500;700&display=swap');
+
+
+:root{
+    --color-coral: #F05D5E;
+    --color-cobalto: #314CB6;
+    --color-white: #F5F5F5;
+    --color-preto: #0D0D0D;
+    --color-violeta: #9747FF;
+    --color-roxo: #6D499D;
+}
 
 
 * {
@@ -5,6 +19,180 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+header{
+    background: radial-gradient(circle, rgba(83,129,219,1) 0%, rgba(49,76,182,1) 100%);
+}
+
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    height: 6rem;
+    gap: 2rem;
+    z-index: 1; 
+}
+
+.navbar a{
+    font-family: "Raleway";
+    text-decoration: none;
+    color: white;
+    font-weight: se;
+    font-size: 1.3rem;
+    cursor: pointer;
+    
+}
+
+.headerUpper{
+    display: flex;
+    justify-content: center;
+    padding: 5rem 6rem 10rem 6rem;
+
+    position: relative;
+}
+
+.leftInfo,.rightInfo{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.leftInfo{
+    align-items: start;
+}
+
+.rightInfo{
+    align-items: end;
+    justify-content: end;
+}
+
+.headerUpper .textWrapper{
+    width: 48%;
+}
+
+.headerUpper .rightInfo .textWrapper{
+    width: 60%;
+    text-align: end;
+}
+
+.headerUpper .leftInfo h1, .headerUpper .rightInfo h1{
+font-family: "Kanit";
+font-weight: bold;
+color: var(--color-white);
+font-size: 4rem;
+}
+
+
+.headerUpper .leftInfo h4, .headerUpper .rightInfo h4{
+    font-family: "Raleway";
+    font-weight: normal;
+    color: var(--color-white);
+    font-size: 1.3rem;
+}
+
+highlight{
+    color: var(--color-coral) !important;
+    font-weight: bold;
+}
+
+
+.headerUpper button{
+    background-color: var(--color-coral);
+    padding: .6rem 3rem;
+    border-radius: 5rem;
+    border: none;
+
+    color: var(--color-white);
+    font-family: "Inter";
+    font-weight: bold;
+    font-size: 1.2rem;
+
+    cursor: pointer;
+}
+
+.headerNotebook{
+    position: absolute;
+    width: 43rem;
+    top: -4rem;
+    right: 28rem;
+    user-select: none;
+    
+}
+
+
+.headerBottom{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem;
+    gap: 2rem;
+}
+
+.headerBottom h1 {
+    font-family: "Kanit";
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: var(--color-white);
+    width: 45rem;
+    text-align: center;
+}
+
+.headerBottom h4 {
+    font-family: "Raleway";
+    font-size: 1.5rem;
+    font-weight: normal;
+    color: var(--color-white);
+    width: 62rem;
+    text-align: center;
+}
+
+
+/* Quem somos css */
+.quemSomosWrapper{
+    display: flex;
+    padding: 2rem 5rem;
+    background-color: var(--color-white);
+}
+
+.quemSomosWrapper .leftInfo {
+    width: 50%;
+    flex-direction: column;
+    align-items: center;
+    gap: 6rem;
+}
+
+.quemSomosWrapper .leftInfo h1{
+    font-family: "Kanit";
+    text-transform: uppercase;
+    color: var(--color-cobalto);
+    font-size: 5rem;
+}
+
+.quemSomosWrapper .infoWrapper {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+}
+
+.quemSomosWrapper .infoWrapper img{
+    width: 10rem;
+}
+
+.quemSomosWrapper .infoWrapper h4{
+font-family: "Raleway";
+font-size: 1.3rem;
+font-weight: 600;
+}
+
+.quemSomosWrapper .infoWrapper>:last-child{
+    text-align: end;
+}
+
 
 html {
     scroll-padding-top: 7vh;
