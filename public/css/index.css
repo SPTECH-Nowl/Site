@@ -206,7 +206,7 @@ highlight {
     width: 10rem;
 }
 
-.quemSomosWrapper .infoWrapper h4 {
+.text {
     font-family: "Raleway";
     font-size: 1.3rem;
     font-weight: 600;
@@ -227,7 +227,7 @@ highlight {
     width: 50%;
     flex-direction: column;
     align-items: center;
-    gap: 6rem;
+    gap: 7rem;
 }
 
 .projetosWrapper .centerInfo h1 {
