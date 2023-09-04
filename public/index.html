@@ -20,16 +20,14 @@
 <body>
     <section id="header">
         <header>
-            <nav class="navbar">
-                <a href="#header">Início</a>
-
-                <a href="#quem-somos">Quem somos</a>
-
-                <img src="assets/img/Logos/nowlLogo.svg" alt="">
-
-                <a href="#projetos">Soluções</a>
-
-                <a href="#fale-conosco">Contato</a>
+            <nav id="navbar">
+                <div class="navWrapper" id="navWrapper">
+                    <a href="#header" class="navLink">Início</a>
+                    <a href="#quem-somos" class="navLink">Quem somos</a>
+                    <img src="assets/img/Logos/nowLogo.svg" alt="" id="logo">
+                    <a href="#projetos" class="navLink">Soluções</a>
+                    <a href="#fale-conosco" class="navLink">Contato</a>
+                </div>
             </nav>
 
             <div class="headerUpper">
@@ -200,8 +198,9 @@
         </div>
     </footer>
     </div>
-</body>
 
+    <script src="js/index.js"></script>
+</body>
 </html>
 <!-- <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>7
 <script type="text/javascript">
@@ -211,31 +210,3 @@
         freeScroll: true
     });
 </script> -->
-<script>
-    function enviar() {
-
-        var ctNome = input_nome.value;
-        var ctAssunto = input_assunto.value;
-        var ctEmail = input_email.value;
-        var ctComunicado = input_comunicado.value;
-
-
-        if (ctNome == "" || ctAssunto == "" || ctEmail == "" || ctComunicado == "") {
-            //cardErro.style.display = "block"
-            swal("Ops", "Preencha todos os campos 😠", "error")
-        }
-        else if (ctNome.length < 3) {
-            swal("Ops", "O nome inserido é muito curto. Por favor, insira um nome com pelo menos 3 caracteres 😠", "warning")
-        }
-        else if (ctEmail.indexOf("gmail") == -1 && ctEmail.indexOf("@") == -1 && ctEmail.indexOf(".com") == -1 && ctEmail.length < 10) {
-            swal("Ops", "O e-mail cadastrado é inválido. insira um e-mail válido 😠", "warning")
-        }
-        else {
-            swal("Parábens", "Mensagem enviada com sucesso, aguarde nosso contato 😄!", "success");
-
-            setTimeout(() => {
-                window.location = "index.html";
-            }, 3000)
-        }
-    }
-</script>

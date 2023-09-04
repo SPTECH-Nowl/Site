@@ -24,39 +24,92 @@ header {
     background: radial-gradient(circle, rgba(83, 129, 219, 1) 0%, rgba(49, 76, 182, 1) 100%);
 }
 
-.navbar {
+#navbar {
+    position: relative;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: sticky;
-    height: 6rem;
-    gap: 2rem;
+    position: fixed;
+    padding: 3rem 0;
+    transition:  .3s ease-in-out;
     z-index: 1;
 }
 
+.navWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    height: 4rem;
+    gap: 2rem;
+    transition: .3s ease-in-out;
+    border-radius: 20px;
+    padding: 20px;
+}
 
-.navbar a {
+.navWrapperAtivo {
+    background-color: var(--color-white);
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.10),
+    0px 2px 2px 0px rgba(0, 0, 0, 0.09), 
+    0px 6px 3px 0px rgba(0, 0, 0, 0.05), 
+    0px 10px 4px 0px rgba(0, 0, 0, 0.01), 
+    0px 15px 4px 0px rgba(0, 0, 0, 0.00);
+
+}
+
+.navbar-ativo {
+    height: 2rem !important;
+    gap: 1.2rem !important;
+}
+
+.navLink {
+    position: relative;
+    color: var(--color-white);
+    font-weight: 500;
+    transition: .3s ease-in;
+}
+
+.navLink::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 3px;
+    border-radius: 20px;
+    background-color: red;
+    transition: .3s ease-in-out;
+}
+
+.navLink:hover::after {
+    width: 100%;
+}
+
+.navLinkAtivo {
+    color: var(--color-preto) !important;
+    font-size: 1.2rem !important;
+}
+
+#logo {
+    width: 10rem;
+    transition: .3s ease-in-out;
+}
+
+#navbar a {
     font-family: "Raleway";
     text-decoration: none;
-    color: white;
     font-weight: se;
     font-size: 1.3rem;
     cursor: pointer;
 
 }
 
-.navbar :hover {
-    color: var(--color-coral);
-    font-size: 1.3rem;
-    cursor: pointer;
-}
-
 
 .headerUpper {
     display: flex;
     justify-content: center;
-    padding: 5rem 6rem 10rem 6rem;
-
+    padding: 10rem 6rem 10rem 6rem;
     position: relative;
 }
 
@@ -138,7 +191,7 @@ highlight {
 .headerNotebook {
     position: absolute;
     width: 43rem;
-    top: -4rem;
+    top: 2.3rem;
     right: 28rem;
     user-select: none;
 
