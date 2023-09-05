@@ -302,10 +302,8 @@ highlight {
 }
 
 .projetosWrapper .ProjetosInfoWrapper img {
-    width: 10rem;
     align-items: center;
     position: absolute;
-    right: 45%;
 }
 
 
@@ -319,7 +317,16 @@ highlight {
     margin-top: 5%;
 }
 
-/* carrosel
+.projetoPrincipal {
+    width: 100%;
+    height: 80vh;
+    margin-top: 10vh;
+    margin-bottom: 50px;
+    background-color: #D9D9D9;
+    border-radius: 10px;
+}
+
+carrosel
 *{
     margin: 0;
     padding: 0;
@@ -331,18 +338,36 @@ highlight {
     margin: 0 15px;
     overflow: hidden;
     border-radius: 8px;
+    background-color: #D9D9D9;
 }
 
 .cell img{
-    width: 800px;
-    height: 230px;
+    width: 100%;
+    display: none;
     object-fit: cover;
-} */
+}
+
+.divisoriaWrapper {
+    position: relative !important;
+    width: 100%;
+    display: flex;justify-content: center;
+}
+
+.dot {
+    border-radius: 0 !important;
+}
+
+.dot.is-selected {
+    transform: scale(1.4);
+    background-color: var(--color-coral) !important;
+}
+
 
 html {
     scroll-padding-top: 7vh;
     scroll-behavior: smooth;
 }
+
 
 
 
