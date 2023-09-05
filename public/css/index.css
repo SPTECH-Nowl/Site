@@ -11,6 +11,7 @@
     --color-preto: #0D0D0D;
     --color-violeta: #9747FF;
     --color-roxo: #6D499D;
+    --color-gray: #252525;
 }
 
 
@@ -20,7 +21,48 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-padding-top: 7vh;
+    scroll-behavior: smooth;
+}
+
+
+
+
+html {
+    scroll-padding-top: 7vh;
+    scroll-behavior: smooth;
+}
+
+.select-disable {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+body {
+    font-family: "Raleway";
+}
+
+body::-webkit-scrollbar {
+    width: 5px;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: #314cb6;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #F05D5E;
+    ;
+    border-radius: 5px;
+}
+
+
 header {
+    position: relative;
     background: radial-gradient(circle, rgba(83, 129, 219, 1) 0%, rgba(49, 76, 182, 1) 100%);
 }
 
@@ -49,13 +91,15 @@ header {
 }
 
 .navWrapperAtivo {
-    background-color: var(--color-white);
+    background: rgba( 255, 255, 255, 0.55 );
+    backdrop-filter: blur( 8px );
+    -webkit-backdrop-filter: blur( 8px );
+    border-radius: 10px;
     box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.10),
     0px 2px 2px 0px rgba(0, 0, 0, 0.09), 
     0px 6px 3px 0px rgba(0, 0, 0, 0.05), 
     0px 10px 4px 0px rgba(0, 0, 0, 0.01), 
     0px 15px 4px 0px rgba(0, 0, 0, 0.00);
-
 }
 
 .navbar-ativo {
@@ -104,7 +148,60 @@ header {
     cursor: pointer;
 
 }
+/* tinha feito essa animação em uma outra página vazia de testes e lá tava funcionando normal, aqui ela quebrou completamente */
+/* 
+.scrollWrapper {
+    position: relative;
+    border-radius: 30px;
+    border: 5px solid white;
+    background-color: white;
+    width: 25px;
+    height: 60px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+  
+.scrollWheel {
+    position: absolute;
+    width: 50%;
+    height: 30%;
+    align-self: flex-start;
+    background-color: #F05D5E;
+    border-radius: 30px;
+    animation: scroll-animation 3s linear infinite;
+}
 
+@keyframes scroll-animation {
+    20% {
+    height: 30%;
+    align-self: flex-start;
+    }
+    40% {
+    height: 100%;
+    align-self: flex-start;
+    }
+    45% {
+    height: 100%;
+    align-self: flex-end;
+    }
+    60% {
+    height: 30%;
+    align-self: flex-end;
+    }
+    80% {
+    height: 100%;
+    align-self: flex-end;
+    }
+    85% {
+    height: 100%;
+    align-self: flex-start;
+    }
+    100% {
+    height: 30%;
+    align-items: flex-start;
+    }
+} */
 
 .headerUpper {
     display: flex;
@@ -131,7 +228,7 @@ header {
 }
 
 .headerUpper .textWrapper {
-    width: 48%;
+    width: 50%;
 }
 
 .headerUpper .rightInfo .textWrapper {
@@ -157,8 +254,8 @@ header {
 }
 
 highlight {
-    color: var(--color-coral) !important;
-    font-weight: bold;
+    color: #F05D5E !important;
+    font-weight: 700;
 }
 
 
@@ -192,7 +289,7 @@ highlight {
     position: absolute;
     width: 43rem;
     top: 2.3rem;
-    right: 28rem;
+    right: 29rem;
     user-select: none;
 
 }
@@ -263,6 +360,11 @@ highlight {
     font-family: "Raleway";
     font-size: 1.3rem;
     font-weight: 600;
+    color: var(--color-gray);
+}
+
+.text-center {
+    text-align: center;
 }
 
 .quemSomosWrapper .infoWrapper>:last-child {
@@ -320,7 +422,7 @@ highlight {
 .projetoPrincipal {
     width: 100%;
     height: 80vh;
-    margin-top: 10vh;
+    margin-top: 6vh;
     margin-bottom: 50px;
     background-color: #D9D9D9;
     border-radius: 10px;
@@ -350,55 +452,24 @@ carrosel
 .divisoriaWrapper {
     position: relative !important;
     width: 100%;
-    display: flex;justify-content: center;
+    display: flex;
+    justify-content: center;
 }
+
 
 .dot {
     border-radius: 0 !important;
+    transition: .3s ease-in-out !important;
+}
+
+.dot:hover {
+    background-color: var(--color-gray) !important;
 }
 
 .dot.is-selected {
     transform: scale(1.4);
     background-color: var(--color-coral) !important;
 }
-
-
-html {
-    scroll-padding-top: 7vh;
-    scroll-behavior: smooth;
-}
-
-
-
-
-html {
-    scroll-padding-top: 7vh;
-    scroll-behavior: smooth;
-}
-
-.select-disable {
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -o-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-
-body::-webkit-scrollbar {
-    width: 5px;
-}
-
-body::-webkit-scrollbar-track {
-    background-color: #314cb6;
-}
-
-body::-webkit-scrollbar-thumb {
-    background-color: #F05D5E;
-    ;
-    border-radius: 5px;
-}
-
 
 #fale-conosco {
     display: flex;
