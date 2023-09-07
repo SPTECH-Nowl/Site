@@ -82,7 +82,7 @@ function validar_assunto() {
    var assunto = input_assunto.value
    var span = document.getElementById('span_validar_assunto')
 
-   if (assunto.length >5) {
+   if (assunto.length <5) {
        span.style.color = 'red'
        span.innerHTML = 'O assunto é muito curta. Por favor, insira um assunto válido'
        span.style.fontFamily = 'Mulish'
@@ -97,7 +97,7 @@ function validar_assunto() {
        span.style.fontFamily = 'Mulish'
        span.style.fontSize = '15px'
        input.style.borderColor = 'green'
-       span.innerHTML = 'A senha inserida está validada'
+       span.innerHTML = 'A assunto inserido é valido'
        input.classList.remove("shake");
    }
 }
