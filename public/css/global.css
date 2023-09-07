@@ -1,0 +1,27 @@
+/* Importar Fontes */
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Raleway:wght@300;400;500;700&display=swap');
+
+/* Variáveis CSS */
+:root {
+    --color-coral: #F05D5E;
+    --color-cobalto: #314CB6;
+    --color-branco: #F5F5F5;
+    --color-preto: #0D0D0D;
+    --color-violeta: #9747FF;
+    --color-roxo: #6D499D;
+    --color-roxoEscuro: #4E2F78;
+    --color-cinza: #252525;
+
+    --font-title: "Kanit";
+    --font-text: "Raleway";
+}
+
+/* Zerando estilo geral */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}

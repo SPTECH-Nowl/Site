@@ -1,16 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="shortcut icon" href="assets/img/Logos/LogoProjeto.png" type="image/x-icon">
-    <link rel="stylesheet" href="css/login.css">
     <title>Login</title>
+
+    <link rel="stylesheet" href="css/login.css">
     <script src="js/index.js"></script>
-      <!-- Sweet alert-->
-      <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-      <!-- Sweet alert -->
+
+    <!-- Sweet alert-->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!-- Sweet alert -->    
 </head>
 
 <body>
@@ -21,15 +24,19 @@
         <div class="campo">
 
             <label for="Email">Email:</label>
-            <!-- <span id="icon_err">icon</span> -->
-            <input data-aos="fade-up" type="email" name="Email" id="email_input" placeholder="exemplo@servidor.com"  onkeyup="validar_email()">
+            <div class="input-div">
+                <img class="icon-input" id="icon_email_input" src="" alt="">
+                <input data-aos="fade-up" type="email" name="Email" id="email_input" placeholder="exemplo@servidor.com" oninput="validar_email()">
+            </div>
             <span id="span_validar_email"></span>
         </div>
         <div class="campo">
 
             <label for="Senha">Senha:</label>
-            <!-- <span id="icon_check">icon</span> -->
-            <input data-aos="fade-up" type="password" name="Senha" id="senha_input" placeholder="SenhaDaora12@" onkeyup="validar_senha()">
+            <div class="input-div">
+                <img class="icon-input" id="icon_senha_input" src="" alt="">
+                <input data-aos="fade-up" type="password" name="Senha" id="senha_input" placeholder="SenhaDaora12@" oninput="validar_senha()">
+            </div>
             <span id="span_validar_senha"></span>
 
 
@@ -40,7 +47,7 @@
 
     </div>
 
-    <h2>Não tem conta ainda?    <a href="cadastro.html"> cadastre-se</a></h2>
+    <h3>Não tem conta ainda? <a href="cadastro.html"> Cadastre-se</a></h3>
 
 </body>
 

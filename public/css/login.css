@@ -11,6 +11,11 @@
     --color-violeta: #9747FF;
     --color-roxo: #6D499D;
     --color-roxoEscuro: #4E2F78;
+    --color-errado: #F24D28;
+    --color-certo: #439CDD;
+
+    --font-title: "Kanit";
+    --font-text: "Raleway";
 }
 
 
@@ -33,7 +38,7 @@ body {
     width: 100vw;
     height: 85vh;
     border-radius: 0 0 40% 40% / 0 0 15% 15%;
-    box-shadow: 0px 8px 1px 0 rgb(184, 184, 184);
+    box-shadow: 0px 8px 5px 0 rgb(184, 184, 184);
     color: var(--color-white);
     background: var(--color-violeta);
 
@@ -50,31 +55,39 @@ body {
     justify-content: center;
     align-items: start;
     margin-bottom: 2%;
+    font-family: var(--font-title);
 }
 
 
 .campo label {
-    margin-left: 30px;
-    font-size: 25px;
-    font-weight: 700;
+    margin-left: 20px;
+    font-size: 20px;
 }
 
 .campo input {
-    width: 397px;
+    width: 400px;
     border-radius: 6px;
-    border: 3px var(--color-cobalto) solid;
-    font-family: 'Mulish';
-    padding: 3%;
+    border: none;
+    font-family: var(--font-text);
+    padding: 3% 5%;
     height: 50px;
     font-size: 50px;
     border-radius: 30px;
     font-size: 1rem;
     background: var(--color-roxoEscuro);
-    color: var(--color-roxo);
+    color: var(--color-white);
+    transition: all .25s ease-in-out;
 }
 
 .campo input::placeholder {
     color: var(--color-roxo);
+    font-family: var(--font-text);
+    font-weight: 600;
+}
+
+.campo input:focus {
+    outline: none;
+    box-shadow: 8px 8px 4px 0px rgba(0, 0, 0, 0.25) inset, -6px 6px 4px 0px rgba(0, 0, 0, 0.25) inset;
 }
 
 .principal button {
@@ -87,30 +100,69 @@ body {
     color: var(--color-roxo);
     border: none;
     box-shadow: 8px 8px 4px 0px rgba(0, 0, 0, 0.25), -6px 6px 4px 0px rgba(0, 0, 0, 0.25) inset;
-
-
+    cursor: pointer;
+    transition: all .25s ease-in-out;
 }
 
-h2 {
+.principal button:hover {
+    background: var(--color-roxo);
+    color: var(--color-white);
+}
+
+h3 {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 2%;
-    color: var(--color-roxo);
-    font-family: Kanit;
-
+    color: var(--color-preto);
+    font-family: var(--font-title);
+    font-weight: 500;
 }
 
 a {
-    color: var(--color-roxo);
+    transition: all .25s ease-in-out;
     margin-left: 5px;
+    color: var(--color-preto);
+}
 
+a:hover {
+    color: var(--color-roxo);
+}
 
+span.not-valid {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+    font-family: var(--font-text);
+    font-weight: 600;
+    max-width: 380px;
+    align-self: center;
+}
+
+span.valid {
+    color: var(--color-certo);
+    font-size: 12px;
+    margin-top: 5px;
+    font-family: var(--font-text);
+    font-weight: 600;
+    max-width: 380px;
+    align-self: center;
+}
+
+.input-div {
+    display: flex;
+    align-items: center;
+}
+
+.icon-input {
+    width: 30px;
+    position: absolute;
+    margin-left: -50px;
 }
 
 .shake {
     animation: shake 0.3s;
-  }
+}
   
   @keyframes shake {
     0% { transform: translateX(0); }
