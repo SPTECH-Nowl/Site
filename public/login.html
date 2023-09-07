@@ -4,8 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="login.css">
-    <title>Document</title>
+    <link rel="shortcut icon" href="assets/img/Logos/LogoProjeto.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/login.css">
+    <title>Login</title>
+    <script src="js/index.js"></script>
+      <!-- Sweet alert-->
+      <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+      <!-- Sweet alert -->
 </head>
 
 <body>
@@ -17,13 +22,15 @@
 
             <label for="Email">Email:</label>
             <!-- <span id="icon_err">icon</span> -->
-            <input type="email" name="Email" id="Email" placeholder="exemplo@servidor.com">
+            <input data-aos="fade-up" type="email" name="Email" id="email_input" placeholder="exemplo@servidor.com"  onkeyup="validar_email()">
+            <span id="span_validar_email"></span>
         </div>
         <div class="campo">
 
             <label for="Senha">Senha:</label>
             <!-- <span id="icon_check">icon</span> -->
-            <input type="password" name="Senha" id="Senha" placeholder="SenhaDaora12@">
+            <input data-aos="fade-up" type="password" name="Senha" id="senha_input" placeholder="SenhaDaora12@" onkeyup="validar_senha()">
+            <span id="span_validar_senha"></span>
 
 
         </div>

@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <link rel="stylesheet" href="css/index.css">
-
+    <script src="js/index.js"></script>
     <!-- Sweet alert-->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <!-- Sweet alert -->
@@ -124,14 +124,17 @@
         <div>
             <div class="fale-conosco-inputs">
                 <span class="fale-conosco-span">Nome</span>
-                <input data-aos="fade-right" data-aos-duration="700" id="input_nome" placeholder="Digite seu nome"
-                    required>
+                <input data-aos="fade-right" data-aos-duration="700" id="input_nome" placeholder="Digite seu nome" 
+                    required  onkeyup="validar_nome()" >
+                    <span id="span_validar_nome"></span>
                 <span class="fale-conosco-span">Assunto</span>
-                <input data-aos="fade-right" data-aos-duration="700" id="input_assunto" placeholder="Digite o assunto"
-                    required>
+                <input data-aos="fade-right" data-aos-duration="700" id="input_assunto" placeholder="Digite o assunto" "
+                    required onkeyup="validar_assunto()" >
+                    <span id="span_validar_assunto"></span>
                 <span class="fale-conosco-span">E-mail</span>
-                <input data-aos="fade-right" data-aos-duration="700" id="input_email" placeholder="Digite seu e-mail"
-                    required>
+                <input data-aos="fade-right" data-aos-duration="700" id="input_email" placeholder="Digite seu e-mail" =
+                    required onkeyup="validar_email_contato()" >
+                    <span id="span_validar_email_contato"></span>
             </div>
             <div class="fale-conosco-comunicado">
                 <span class="fale-conosco-span">Dê um comunicado</span>
@@ -185,7 +188,7 @@
                         <form>
                             <input type="email" placeholder="Digite o seu e-mail" required>
                             <button class="cadastrar">Cadastrar-se</button>
-                            <img src="assets/img/Logos/nowlLogo.svg">
+                            <img src="assets/img/Logos/nowlLogoPreta.svg">
                         </form>
                     </div>
                 </div>
