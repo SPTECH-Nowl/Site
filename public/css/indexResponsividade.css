@@ -20,14 +20,14 @@
          flex-direction: column-reverse; 
          gap: 1rem;
          width: 100%;
-         text-align: center;
+         text-align: left;
     }
 
     .leftInfo,
     .rightInfo {
         width: 100%;
         align-items: center;
-        text-align: center;
+        text-align: left;
         gap: 1rem;
     }
 
@@ -102,7 +102,7 @@
 
     .quemSomosWrapper .infoWrapper{
         width: 100%;
-        text-align: center;
+        text-align: left;
     }
 
     .quemSomosWrapper .infoWrapper>:nth-child(3){
@@ -125,8 +125,7 @@
     }
 
     .projetosWrapper .centerInfo h1{
-        font-size: 2rem;
-        width: 10rem;
+        font-size: 3rem;
         place-self: center;
     }
 
@@ -134,13 +133,31 @@
         height: 40vh;
     }
 
+    .h1_mobile {
+        display: block;
+    }
+
+    .h1_desktop {
+        display: none;
+    }
+
+    .subtitle {
+        margin-top: 3vh;
+        font-size: 1.5rem;
+    }
+
     .cell{
-        width: 50%;
-        height: 120px;
+        width: 100%;
+        height: 200px !important;
     }
 
     .flickity-button{
+        width: 20px !important;
         background: unset !important;
+    }
+
+    .flickity-button:focus {
+        border: none;
     }
 
     .flickity-prev-next-button{
