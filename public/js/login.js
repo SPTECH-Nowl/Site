@@ -14,6 +14,7 @@ function validar_email() {
 
     } else {
         span.classList.remove("not-valid");
+        span.innerHTML = "";
         span.classList.add("valid");
         input.classList.remove("shake");
         icon.src = "./assets/img/Icone/Verificado.svg";

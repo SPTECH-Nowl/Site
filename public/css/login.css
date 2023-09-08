@@ -85,7 +85,6 @@ body {
     font-family: var(--font-title);
 }
 
-
 .form label {
     margin-left: 20px;
     font-size: 20px;
@@ -172,13 +171,24 @@ a:hover {
 }
 
 span.not-valid {
-    color: red;
-    font-size: 12px;
+    color: rgb(255, 255, 255);
+    font-size: 1rem;
     margin-top: 5px;
     font-family: var(--font-text);
     font-weight: 600;
     max-width: 380px;
     align-self: center;
+    opacity: 1 !important;
+}
+
+#span_validar_email,
+#span_validar_nome,
+#span_validar_email_cadastro,
+#span_senha_cadastro,
+#span_validar_conf_senha,
+#span_validar_codigo {
+    opacity: 0;
+    width: 150px !important;
 }
 
 span.valid {
@@ -192,14 +202,18 @@ span.valid {
 }
 
 .input-div {
-    display: flex;
     align-items: center;
+}
+
+.flex {
+    display: flex !important;
 }
 
 .icon-input {
     width: 30px;
     position: absolute;
     margin-left: -50px;
+    margin-top: 10px;
 }
 
 .shake {
