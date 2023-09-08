@@ -13,41 +13,136 @@
 
     <!-- Sweet alert-->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <!-- Sweet alert -->    
+    <!-- Sweet alert -->
 </head>
 
 <body>
 
-    <div class="principal">
-        <h1>Login</h1>
+    <main class="main">
 
-        <div class="campo">
+        <div class="login-section">
 
-            <label for="Email">Email:</label>
-            <div class="input-div">
-                <img class="icon-input" id="icon_email_input" src="" alt="">
-                <input data-aos="fade-up" type="email" name="Email" id="email_input" placeholder="exemplo@servidor.com" oninput="validar_email()">
+            <div class="form roxo">
+                <div class="login-header">
+                    <img src="assets/img/Logos/logoMagister.svg" alt="">
+                    <h1>LOGIN</h1>
+                </div>
+
+                <div class="campo">
+
+                    <label for="Email">Email:</label>
+                    <div class="input-div">
+                        <img class="icon-input" id="icon_email_input" src="" alt="">
+                        <input data-aos="fade-up" type="email" name="Email" id="email_input"
+                            placeholder="exemplo@servidor.com" onblur="">
+                    </div>
+                    <span id="span_validar_email"></span>
+                </div>
+
+                <div class="campo">
+
+                    <label for="Senha">Senha:</label>
+                    <div class="input-div">
+                        <img class="icon-input" id="icon_senha_input" src="" alt="">
+                        <input data-aos="fade-up" type="password" name="Senha" id="senha_input"
+                            placeholder="SenhaDaora12@" onblur="validar_senha()">
+                    </div>
+                    <span id="span_validar_senha"></span>
+
+
+                </div>
+
+                <button onclick="logar()">Entrar</button>
+
+                <h3>Já tem uma conta? <a href="#"> Entre </a></h3>
+
+
             </div>
-            <span id="span_validar_email"></span>
-        </div>
-        <div class="campo">
 
-            <label for="Senha">Senha:</label>
-            <div class="input-div">
-                <img class="icon-input" id="icon_senha_input" src="" alt="">
-                <input data-aos="fade-up" type="password" name="Senha" id="senha_input" placeholder="SenhaDaora12@" oninput="validar_senha()">
+            <h3>Não tem conta ainda? <a href="#"> Cadastre-se </a></h3>
+
+        </div>
+
+        <div class="cadastro-section">
+
+            <div class="form white">
+
+                <div class="login-header">
+                    <img src="assets/img/Logos/magisterLogo.svg" alt="">
+                    <h1>CADASTRO</h1>
+                </div>
+
+                <div class="campos-linha">
+
+                    <div class="campo">
+
+                        <label for="Nome">Nome:</label>
+                        <div class="input-div">
+                            <img class="icon-input" id="icon_nome_input" src="" alt="">
+                            <input data-aos="fade-up" type="text" name="Nome" id="nome_input"
+                                placeholder="Frizzarini" onblur="">
+                        </div>
+                        <span id="span_validar_nome"></span>
+                    </div>
+                    <div class="campo">
+
+                        <label for="Email">Email:</label>
+                        <div class="input-div">
+                            <img class="icon-input" id="icon_email_input" src="" alt="">
+                            <input data-aos="fade-up" type="email" name="Email" id="email_input"
+                                placeholder="exemplo@servidor.com" onblur="validar_email()">
+                        </div>
+                        <span id="span_validar_email"></span>
+                    </div>
+
+                </div>
+
+                <div class="campos-linha">
+
+                    <div class="campo">
+
+                        <label for="Senha">Senha:</label>
+                        <div class="input-div">
+                            <img class="icon-input" id="icon_nome_input" src="" alt="">
+                            <input data-aos="fade-up" type="text" name="Senha" id="senha_input"
+                                placeholder="SenhaDaora12@" onblur="">
+                        </div>
+                        <span id="span_validar_senha"></span>
+                    </div>
+                    <div class="campo">
+
+                        <label for="ConfirmSenha">Confirmar Senha:</label>
+                        <div class="input-div">
+                            <img class="icon-input" id="icon_email_input" src="" alt="">
+                            <input data-aos="fade-up" type="email" name="ConfirmSenha" id="conf_senha_input"
+                                placeholder="*************" onblur="">
+                        </div>
+                        <span id="span_validar_conf_senha"></span>
+                    </div>
+                    
+                </div>
+
+                <div class="campo">
+
+                    <label for="Codigo">Código da Sala:</label>
+                    <div class="input-div">
+                        <img class="icon-input" id="icon_email_input" src="" alt="">
+                        <input data-aos="fade-up" type="email" name="Codigo" id="codigo_input"
+                            onblur="">
+                    </div>
+                    <span id="span_validar_conf_senha"></span>
+                </div>
+
+                <button onclick="cadastrar()">Cadastrar</button>
+
             </div>
-            <span id="span_validar_senha"></span>
 
 
         </div>
 
-        <button onclick="logar()">Entrar</button>
+    </main>
 
 
-    </div>
-
-    <h3>Não tem conta ainda? <a href="cadastro.html"> Cadastre-se</a></h3>
 
 </body>
 

@@ -26,14 +26,6 @@ html {
     scroll-behavior: smooth;
 }
 
-
-
-
-html {
-    scroll-padding-top: 7vh;
-    scroll-behavior: smooth;
-}
-
 .select-disable {
     -moz-user-select: none;
     -webkit-user-select: none;

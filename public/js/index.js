@@ -144,7 +144,6 @@ function validar_email() {
     } else {
         span.classList.remove("not-valid");
         span.classList.add("valid");
-        span.innerHTML = 'O email está validado'
         input.classList.remove("shake");
         icon.src = "./assets/img/Icone/Verificado.svg";
 
