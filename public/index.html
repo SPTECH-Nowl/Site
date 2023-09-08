@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="css/index.css">
     <script src="js/index.js"></script>
     
+    <link rel="stylesheet" href="css/indexResponsividade.css">
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
@@ -42,18 +44,27 @@
                             <highlight>Dados confiáveis</highlight> são o alicerce da tomada de decisão inteligente. Oferecemos soluções para o monitoramento de dados que garantem a confiabilidade e a integridade dos dados. 
                         </h4>
                     </div>
-                    <a href="#quem-somos"><button id="btn-header">SAIBA MAIS</button></a>
+                    <div class="btnHeaderWrapper">
+                        <img src="assets/img/setaBaixo.svg" alt="" class="setaBaixo">
+                        <a href="#quem-somos" id="btn-header"><button class="btn-header">SAIBA MAIS</button></a>
+                    </div>
                 </div>
 
-                <img src="assets/img/notebookImage.png" alt="" class="headerNotebook">
+                <img src="assets/img/notebookImage.svg" alt="" class="headerNotebook">
 
                 <div class="rightInfo">
-                    <div class="textWrapper">
-                        <h4>
-                            Nossas soluções ajudam a sua organização a obter inteligência de seus dados, gerando <highlight>insights valiosos</highlight> para melhorar sua tomada de decisão e reduzir custos.
-                        </h4>
+                    <img class="headerCell" src="assets/img/headerCellphonesMobile.svg" alt="">
+                    
+                    <div class="rightInfoWrapper">
+                        <div class="textWrapper">
+                            <img src="assets/img/logomarca.svg" alt="">
+                           
+                            <h4>
+                                Nossas soluções ajudam a sua organização a obter inteligência de seus dados, gerando <highlight>insights valiosos</highlight> para melhorar sua tomada de decisão e reduzir custos.
+                            </h4>
+                        </div>
+                        <h1 class="title">INTELIGÊNCIA</h1>
                     </div>
-                    <h1 class="title">INTELIGÊNCIA</h1>
                 </div>
             </div>
 
@@ -76,22 +87,23 @@
                 <div class="infoWrapper">
                     <p class="text">A Nowl é a empresa líder em monitoramento de desemepnho dos
                         computadores com opções de controle remoto deles
-                        em sistemas. Fornecemos informações precisas e em tempo real
+                        em sistemas. Fornecemos <highlight>informações precisas</highlight> e em tempo real
                         sobre as condições e perfomance da sua maquina. 
                     </p>
 
                     <img src="assets/img/divisória.svg" alt="">
 
-                    <p class="text">Permitindo que você verifique quais aplicações
+                    <p class="text">Permitindo que você <highlight>verifique</highlight> quais aplicações
                         estão abertas no momento e como sua maquina está perfomando com elas, com a finalidade de
                         acompanhar se os computadores desempenham como esperado.
                     </p>
                 </div>
             </div>
 
-            <img src="assets/img/quemSomosCellphones.png" alt="">
+            <img class="quemCell" src="assets/img/quemSomosCellphones.png" alt="">
         </div>
     </section>
+
     <section id="projetos">
         <div class="projetosWrapper">
             <div class="centerInfo">
@@ -101,7 +113,7 @@
                         
                     </div>
                     <p class="text text-center">
-                        A Nowl é uma empresa de monitoramento com soluções <highlight>simples e eficientes</highlight>, acreditamos que menos é mais para acelerar o crescimento do seu negócio. Nosso principal produto é o <highlight>Magister</highlight>, um sistema de monitoramento de hardware para instituições de ensino. Ele conta com controle de programas permitidos, sistema de strikes e outras funcionalidades. Se interessou pela solução? <highlight>Saiba mais abaixo!</highlight>
+                         Nosso principal produto é o <highlight>Magister</highlight>, um sistema de monitoramento de hardware para instituições de ensino. Ele conta com controle de programas permitidos, sistema de strikes e outras funcionalidades. Se interessou pela solução? <highlight>Saiba mais abaixo!</highlight>
                     </p><br>
 
                     <div class="divisoriaWrapper">
@@ -111,6 +123,8 @@
                     <div class="projetoPrincipal">
                         <img src="assets/img/mockup-magister.png" alt="">
                     </div>
+
+                    <h1>Outros projetos</h1>
 
                     <div class="main-carousel">
                         <div class="cell"><img src="assets/img/projetos/prot1 1.png"></div>
@@ -123,6 +137,8 @@
                 </div>
             </div>
     </section>
+
+   
     <section id="fale-conosco">
         <h1 class="titulo-section select-disable">Fale Conosco</h1>
         <div>
@@ -149,28 +165,18 @@
             </div>
         </div>
     </section>
-
+    
+    
     <footer>
         <div class="container-footer">
             <div class="row-footer">
 
                 <div class="subdiv-footer">
-                    <h4>Empresa</h4>
-                    <ul>
-                        <li><a href="#header">Landing Page</a></li>
-                        <li><a href="#quem-somos"> Quem somos </a></li>
-                        <li><a href="#projetos"> Projetos</a></li>
-                        <li><a href="#fale-conosco"> Fale Conosco</a></li>
-                    </ul>
-                </div>
-
-                <div class="subdiv-footer">
                     <h4>Mídias Sociais</h4>
                     <ul>
-                        <li><a href="#">Instagram</a></li>
-                        <li><a href="https://github.com/SPTECH-Nowl/Site">Git Hub</a></li>
-                        <li><a href="#">Linkedin</a></li>
-                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#"><img src="assets/img/Icone/twitter.png" alt=""></a></li>
+                        <li><a href="https://github.com/SPTECH-Nowl/Site"><img src="assets/img/Icone/github.png" alt=""></a></li>
+                        <li><a href="#"><img src="assets/img/Icone/instagram.png" alt=""></a></li>
                     </ul>
                 </div>
 
@@ -198,7 +204,7 @@
                 </div>
             </div>
         </div>
-    </footer>
+    </footer> 
     </div>
 
     <script src="js/index.js"></script>

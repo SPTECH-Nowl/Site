@@ -1,0 +1,210 @@
+@media (max-width: 600px) {
+    /* Header responsividade */
+    #navbar{
+        display: none;
+    }
+
+    .headerUpper{
+        flex-direction: column;
+        padding: 5rem 2.5rem;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    .headerUpper .leftInfo h1, .headerUpper .rightInfo h1{
+        font-size: 2rem;
+    }
+
+    .rightInfoWrapper{
+         display: flex; 
+         flex-direction: column-reverse; 
+         gap: 1rem;
+         width: 100%;
+         text-align: center;
+    }
+
+    .leftInfo,
+    .rightInfo {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .headerUpper .leftInfo h4, .headerUpper .rightInfo h4{
+        font-size: 1.2rem;
+    }
+
+    .headerNotebook{
+        display: none;
+    }
+    
+    .headerUpper .textWrapper {
+        width: 100%;
+    }
+
+    .btnHeaderWrapper{
+        display: flex; 
+        width: 100%; 
+        margin-top: 3rem; 
+        justify-content: space-between;
+    }
+
+    .btnHeaderWrapper >:nth-child(1){
+        display: block;
+        width: 2rem;    
+    }
+
+    .btn-header {
+        padding: 1rem 1.7rem;
+        font-size: .9rem;
+    }
+
+    .headerCell{
+        display: block;
+        width: 20rem;
+    }
+
+    .headerUpper .rightInfo .textWrapper{
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .headerUpper .rightInfo .textWrapper>:nth-child(1){
+        display: block;
+        width: 3.5rem;
+    }
+
+
+    .headerBottom, .quemCell{
+        display: none;
+    }
+
+
+    /* Quem somos responsividade */
+
+    .quemSomosWrapper{
+        flex-direction: column;
+        padding: 5rem 2.5rem;
+    }
+    
+    .quemSomosWrapper .leftInfo{
+        width: 100%;
+        gap: 2rem;
+    }
+
+    .quemSomosWrapper .leftInfo h1{
+        font-size: 2rem;
+    }
+
+    .quemSomosWrapper .infoWrapper{
+        width: 100%;
+        text-align: center;
+    }
+
+    .quemSomosWrapper .infoWrapper>:nth-child(3){
+        text-align: center;
+    }
+
+
+    /* projetos responsividade */
+
+    .projetosWrapper{
+        padding: 5rem 2.5rem;
+    }
+
+    .centerInfo{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .projetosWrapper .centerInfo h1{
+        font-size: 2rem;
+        width: 10rem;
+        place-self: center;
+    }
+
+    .projetoPrincipal{
+        height: 40vh;
+    }
+
+    .cell{
+        width: 50%;
+        height: 120px;
+    }
+
+    .flickity-button{
+        background: unset !important;
+    }
+
+    .flickity-prev-next-button{
+        top: 25%;
+    }
+
+    .ProjetosInfoWrapper{
+        display: flex;
+        flex-direction: column;
+    }
+
+
+
+    /* Fale conosco */
+
+    #fale-conosco{
+        padding: 5rem 2.5rem;
+        height: unset;
+        align-items: center;
+        width: 100%;
+    }
+
+    #fale-conosco h1{
+        font-size: 2rem;
+    }
+
+    #fale-conosco > div {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .fale-conosco-inputs{
+        width: 100%;
+    }
+
+    .fale-conosco-inputs input{
+        width: unset;
+    }
+
+    .fale-conosco-comunicado{
+        width: 100%;
+        gap: 1rem;
+    }
+
+    .btn-fale-conosco{
+        padding: 1rem 1.7rem;
+    }
+
+    .btn-fale-conosco:hover{
+        border-radius: 32px;
+        color: white;
+    }
+
+
+    .row-footer>:nth-child(1)>:nth-child(2){
+        display: flex;
+        gap: 1rem;
+    }
+
+    .row-footer>:nth-child(1)>:nth-child(2) img{
+        width: 2rem;
+    }
+
+    .form-sub img{
+        width: unset;
+    }
+}

@@ -122,7 +122,7 @@ header {
     width: 0%;
     height: 3px;
     border-radius: 20px;
-    background-color: red;
+    background-color: var(--color-coral);
     transition: .3s ease-in-out;
 }
 
@@ -231,17 +231,22 @@ header {
     width: 50%;
 }
 
-.headerUpper .rightInfo .textWrapper {
+
+.rightInfoWrapper .textWrapper{
+    width: 100%;
+}
+
+.rightInfoWrapper{
     width: 60%;
     text-align: end;
 }
-
 .headerUpper .leftInfo h1,
 .headerUpper .rightInfo h1 {
     font-family: "Kanit";
     font-weight: bold;
     color: var(--color-white);
     font-size: 4rem;
+    z-index: 2;
 }
 
 
@@ -259,7 +264,7 @@ highlight {
 }
 
 
-#btn-header {
+.btn-header {
     background-color: var(--color-coral);
     padding: .6rem 3rem;
     border-radius: 5rem;
@@ -271,8 +276,16 @@ highlight {
     cursor: pointer;
 }
 
+.btnHeaderWrapper >:nth-child(1){
+    display: none;
+}
 
-#btn-header :hover {
+.headerUpper .rightInfo .textWrapper>:nth-child(1){
+    display: none;
+}
+
+
+.btn-header :hover {
     -webkit-transform: scale(1.02);
     -moz-transform: scale(1.02);
     -o-transform: scale(1.02);
@@ -284,12 +297,14 @@ highlight {
 
 .headerNotebook {
     position: absolute;
-    width: 43rem;
-    top: 2.3rem;
-    right: 29rem;
+    width: 30rem;
     user-select: none;
-
 }
+
+.headerCell{
+    display: none;
+}
+
 
 .headerBottom {
     display: flex;
@@ -355,7 +370,7 @@ highlight {
 .text {
     font-family: "Raleway";
     font-size: 1.3rem;
-    font-weight: 600;
+    font-weight: 500;
     color: var(--color-gray);
 }
 
@@ -381,13 +396,13 @@ highlight {
     gap: 7rem;
 }
 
+
 .projetosWrapper .centerInfo h1 {
     font-family: "Kanit";
     text-transform: uppercase;
     color: var(--color-cobalto);
     text-align: center;
     font-size: 5rem;
-    margin-top: 3%;
 }
 
 .projetosWrapper .infoWrapper {
@@ -493,17 +508,9 @@ carrosel
     font-size: 3rem;
 }
 
-#fale-conosco::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 160px;
-    background-image: url(../assets/img/fade/fade-down.svg);
-    top: 0;
-    left: 0;
-}
 
-#fale-conosco div {
+
+#fale-conosco > div {
     display: flex;
     justify-content: space-between;
     gap: 3vh;
@@ -571,7 +578,6 @@ carrosel
     border-radius: 32px;
     border: none;
     background-color: #F05D5E;
-    ;
     font-size: 15px;
     align-self: flex-end;
     margin-right: 1vw;
