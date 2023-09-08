@@ -44,9 +44,24 @@ body {
 
 }
 
+.login-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 2rem;
+    margin-bottom: 2rem;
+}
+
+.login-header img {
+    width: 8rem;
+}
+
 .principal h1 {
-    font-size: 3rem;
+    font-family: "Kanit";
+    font-size: 4rem;
     margin: 5.5% 0;
+    line-height: 4rem;
 }
 
 .campo {
