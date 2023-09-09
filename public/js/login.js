@@ -16,7 +16,6 @@ function senha(){
      
 }
 
-
 var status_senha = 1;
 function senha_cadastro(){
 
@@ -34,7 +33,6 @@ function senha_cadastro(){
     }
      
 }
-
 
 
 var status_confirmar_senha = 1;
@@ -82,9 +80,6 @@ function showHideconfirmar(){
         icon.classList.remove('hide')
     }
 }
-
-
-
 
 
 

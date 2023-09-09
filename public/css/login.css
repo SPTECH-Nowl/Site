@@ -8,6 +8,7 @@
     --color-cobalto: #314CB6;
     --color-white: #F5F5F5;
     --color-preto: #0D0D0D;
+    --color-preto-default: #252525;
     --color-violeta: #9747FF;
     --color-roxo: #6D499D;
     --color-roxoEscuro: #4E2F78;
@@ -38,17 +39,20 @@ body {
     flex-direction: column;
     align-items: center;
     font-family: "Raleway";
-    max-width: 100vw;
     height: 85vh;
-
+    gap: 1rem;
 
 }
 
-.form.roxo {
+.roxo {
     border-radius: 0 0 40% 40% / 0 0 15% 15%;
     box-shadow: 0px 8px 5px 0 rgb(184, 184, 184);
     color: var(--color-white);
     background: var(--color-violeta);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .login-header {
@@ -56,51 +60,58 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin: 2rem;
-    margin-bottom: 2rem;
 }
 
 .login-header img {
     width: 8rem;
 }
 
-.form.white .login-header {
-    flex-direction: row;
-    gap: 15px;
-}
 
 .main h1 {
     font-family: "Kanit";
     font-size: 4rem;
     /* margin: 5.5% 0; */
     line-height: 4rem;
-    font-size: 50px;
+    font-size: 2.5rem;
 }
 
 .campo {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: start;
-    margin-bottom: 2%;
+    width: 50%;
     font-family: var(--font-title);
+}
+.roxo button{
+    margin-top: 1rem;
+}
+
+#closeLogin{
+    color: var(--color-coral);
+    margin-left: 0.5rem;
+    text-decoration: underline;
+}
+
+.roxo .campo {
+    width: 30%;
 }
 
 .form label {
     margin-left: 20px;
-    font-size: 20px;
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: var(--font-title);
+    text-transform: lowercase;
+    color: #252525;
 }
 
 .form input {
-    width: 400px;
-    border-radius: 6px;
+    width: 100%;
     border: none;
     font-family: var(--font-text);
-    padding: 3% 5%;
+    padding: 1rem 2rem 1rem 1.5rem;
     height: 50px;
-    font-size: 50px;
     border-radius: 30px;
-    font-size: 1rem;
+    font-size: 1.1rem;
     transition: all .25s ease-in-out;
     background: var(--color-violeta);
     color: var(--color-preto);
@@ -114,7 +125,9 @@ body {
 .form input::placeholder {
     color: var(--color-roxoEscuro);
     font-family: var(--font-text);
-    font-weight: 600;
+    font-weight: 500;
+    color: #474747db;
+    font-family: var(--font-text);
 }
 
 .form.roxo input::placeholder {
@@ -128,8 +141,8 @@ body {
 
 .campos-linha {
     display: flex;
-    gap: 5vw;
-    flex-wrap: wrap;
+    gap: 2rem;
+    width: 50%;
 }
 
 .icon{
@@ -160,9 +173,9 @@ body {
 
 
 .icon_senha{
-    top: 50%;
-    margin-left: 84%;
-    margin-top: -40px;
+    right: 5px;
+    top: 10px;
+    position: absolute;
     transform: translate(-50%);
     background: url(../assets/img/Icone/olho\ ativado.png);
     background-size: cover;
@@ -172,10 +185,11 @@ body {
 }
 
 .icon_senha_desativado{
-    top: 50%;
+
+    position: absolute;
     background: url(../assets/img/Icone/olho\ desativado.png);
-    margin-left: 84%;
-    margin-top: -40px;
+    right: 5px;
+    top: 10px;
     transform: translate(-50%);
     background-size: cover;
     width: 30px;
@@ -185,9 +199,9 @@ body {
 
 
 .icon_confirmar{
-    top: 50%;
-    margin-left: 84%;
-    margin-top: -40px;
+    position: absolute;
+    right: 5px;
+    top: 10px;
     transform: translate(-50%);
     background: url(../assets/img/Icone/olho\ ativado.png);
     background-size: cover;
@@ -199,9 +213,9 @@ body {
 
 
 .icon_confirmar_desativado{
-    top: 50%;
-    margin-left: 70%;
-    margin-top: -40px;
+    position: absolute;
+    right: 5px;
+    top: 10px;
     transform: translate(-50%);
     background: url(../assets/img/Icone/olho\ desativado.png);
     background-size: cover;
@@ -214,15 +228,17 @@ body {
 
 
 .form button {
-    width: 170px;
-    height: 50px;
     font-size: 20px;
-    font-weight: 700;
+    padding: 0.6rem 1.3rem;
+    font-weight: 600;
+    font-family: var(--font-title);
+    text-transform: uppercase;
     border-radius: 25px;
     background: var(--color-white);
     color: var(--color-roxo);
     border: none;
-    box-shadow: 8px 8px 4px 0px rgba(0, 0, 0, 0.25), -6px 6px 4px 0px rgba(0, 0, 0, 0.25) inset;
+    
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.25), -6px 6px 4px 0px rgba(0, 0, 0, 0.25) inset;
     cursor: pointer;
     transition: all .25s ease-in-out;
 }
@@ -244,24 +260,21 @@ h3 {
 
 span {
     transition: all .25s ease-in-out;
-    margin-left: 5px;
     color: var(--color-preto);
     cursor: pointer;
 }
 
-span:hover {
-    color: var(--color-errado);
-}
+
 
 span.not-valid {
     color: rgb(255, 0, 0);
-    font-size: 1rem;
-    margin-top: 5px;
+    font-size: 0.8rem;
     font-family: var(--font-text);
     font-weight: 600;
     max-width: 380px;
     align-self: center;
     opacity: 1 !important;
+    margin-left: 20px;
 }
 
 #span_validar_email,
@@ -271,7 +284,8 @@ span.not-valid {
 #span_validar_conf_senha,
 #span_validar_codigo {
     opacity: 0;
-    width: 150px !important;
+    width: 150px;
+
 }
 
 span.valid {
@@ -285,7 +299,8 @@ span.valid {
 }
 
 .input-div {
-    align-items: center;
+    width: 100%;
+    position: relative;
 }
 
 .flex {
@@ -295,9 +310,12 @@ span.valid {
 .icon-input {
     width: 30px;
     position: absolute;
-    margin-left: -50px;
-    margin-top: 10px;
+    z-index: 2;
+    top: 10px;
+    left: -10px;
 }
+
+
 
 .shake {
     animation: shake 0.3s;
@@ -338,6 +356,7 @@ main {
     animation-name: subir;
     animation-duration: 1s;
     top: -96%;
+    z-index: 2;
 }
 
 
@@ -351,6 +370,11 @@ main {
     }
 }
 
+#activeLogin{
+    text-decoration: underline;
+    color: var(--color-coral);
+    margin-left: 5px;
+}
 
 .activeLogin{
     position: absolute;

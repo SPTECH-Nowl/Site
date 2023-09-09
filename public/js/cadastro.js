@@ -5,7 +5,7 @@ function validar_nome_cadastro() {
     var icon = document.getElementById('icon_nome_input');
     
     if (nome.length < 3) {
-        span.innerHTML = 'O nome inserido é muito curto. Por favor, insira um nome com pelo menos 3 caracteres';
+        span.innerHTML = 'Insira um nome com pelo menos 3 caracteres.';
         span.classList.remove("valid");
         span.classList.add("not-valid");
         input.classList.add("shake");
@@ -31,7 +31,7 @@ function validar_email_cadastro() {
     var icon = document.getElementById('icon_email_input');
 
     if (email.indexOf("@") == -1 || email.indexOf(".") == -1 || email.length < 7) {
-        span.innerHTML = 'O e-mail cadastrado é inválido. Por favor, insira um e-mail válido.';
+        span.innerHTML = 'Insira um e-mail válido.';
         span.classList.remove("valid");
         span.classList.add("not-valid");
         input.classList.add("shake");
@@ -51,10 +51,11 @@ function validar_senha_cadastro() {
     var input = document.getElementById('senha_input_cadastro');
     var senha = senha_input_cadastro.value
     var span = document.getElementById('span_senha_cadastro');
+
     var icon = document.getElementById('icon_senha_input');
     
     if (senha.length < 8) {
-        span.innerHTML = 'Por favor, insira uma senha com pelo menos 8 caracteres';
+        span.innerHTML = 'Insira uma senha com pelo menos 8 caracteres';
         span.classList.remove("valid");
         span.classList.add("not-valid");
         input.classList.add("shake");
@@ -78,7 +79,7 @@ function validar_conf_senha_cadastro() {
     var icon = document.getElementById('icon_confirmar_senha_input');
     
     if (conf_senha != senha) {
-        span.innerHTML = 'Ops! A senha inserida está incorreta. Por favor, tente novamente'
+        span.innerHTML = 'Senhas não coincidem.'
         span.classList.remove("valid");
         span.classList.add("not-valid");
         input.classList.add("shake");
@@ -101,7 +102,7 @@ function validar_codigo() {
     var icon = document.getElementById('icon_codigo_input');
     
     if (codigo.length  != 5) {
-        span.innerHTML = 'Por favor, insira um codigo com 5 caracteres';
+        span.innerHTML = 'Insira um codigo com 5 caracteres';
         span.classList.remove("valid");
         span.classList.add("not-valid");
         input.classList.add("shake");
@@ -142,13 +143,13 @@ function cadastrar() {
         return false;
 }
 else if (nomeVar.length < 3) {
-    swal("Ops", "O nome inserido é muito curto. Por favor, insira um nome com pelo menos 3 caracteres", "warning")
+    swal("Ops", "O nome inserido é muito curto. Insira um nome com pelo menos 3 caracteres", "warning")
 }
 else if (emailVar.indexOf("@") == -1 || emailVar.indexOf(".com") == -1 || emailVar.length < 7) {
-    swal("Ops", "O e-mail cadastrado é inválido. Por favor, insira um e-mail válido.", "warning")
+    swal("Ops", "O e-mail cadastrado é inválido. Insira um e-mail válido.", "warning")
 }
 else if (senhaVar.length < 8) {
-    swal("Ops", "A senha inserida é muito curta. Por favor,insira uma senha com pelo menos 8 caracteres.", "warning")
+    swal("Ops", "A senha inserida é muito curta. Isira uma senha com pelo menos 8 caracteres.", "warning")
 }
 else if (confirmar_senhaVar != senhaVar) {
     swal("Ops", "As senhas não coincidem", "warning")

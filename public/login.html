@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="shortcut icon" href="assets/img/Logos/LogoProjeto.png" type="image/x-icon">
-    <title>Login</title>
+    <link rel="shortcut icon" href="assets/img/Logos/magisterLogo.svg" type="image/x-icon">
+    <title>Magister </title>
 
     <link rel="stylesheet" href="css/login.css">
     <script src="js/login.js"></script>
@@ -33,11 +33,14 @@
 
                     <label for="Email">Email:</label>
                     <div class="input-div">
-                        <img class="icon-input" id="icon_email_input" src="" alt="">
+                        
                         <input data-aos="fade-up" type="email" name="Email" id="email_input"
-                            placeholder="exemplo@servidor.com" onblur="validar_email()">
+                            placeholder="exemplo@servidor.com"> 
+                        
+                        </input>
+
                         <br>
-                        <span id="span_validar_email">Por favor, insira um e-mail válido.</span>
+                        
                     </div>
                 </div>
 
@@ -45,7 +48,7 @@
 
                     <label for="Senha">Senha:</label>
                     <div class="input-div">
-                        <img class="icon-input" id="icon_senha_input" src="" alt="">
+                        <img class="icon-input" src="" alt="">
                         <input type="password" id="senha_input">
                         <div onclick="senha()" style="cursor:pointer;">
                             <div id="olho_login" class="icon_hide"> 
@@ -83,9 +86,9 @@
                             <img class="icon-input" id="icon_nome_input" src="" alt="">
                             <input data-aos="fade-up" type="text" name="e-mail" id="nome_input_cadastro"
                                 placeholder="Frizzarini" onblur="validar_nome_cadastro()">
-                            <br>
-                            <span id="span_validar_nome">O nome inserido é muito curto. Por favor, insira um
-                                nome com pelo menos 3 caracteres</span>
+                            
+                            <span id="span_validar_nome">
+                            </span>
                         </div>
                     </div>
                     <div class="campo">
@@ -95,7 +98,7 @@
                             <img class="icon-input" id="icon_email_input" src="" alt="">
                             <input data-aos="fade-up" type="email" name="Email" id="email_input_cadastro"
                                 placeholder="exemplo@servidor.com" onblur="validar_email_cadastro()">
-                            <br>
+                            
                             <span id="span_validar_email_cadastro">Por favor, insira um e-mail válido.</span>
                         </div>
                     </div>
@@ -108,13 +111,15 @@
 
                         <label for="Senha">Senha:</label>
                         <div class="input-div">
+                            
                             <img class="icon-input" id="icon_senha_input" src="" alt="">
+
+                            <div onclick="senha_cadastro()" style="cursor:pointer; position: relative;">
                             <input data-aos="fade-up" type="text" name="Senha" id="senha_input_cadastro"
                                 placeholder="SenhaDaora12@" onblur="validar_senha_cadastro()">
-                            <div onclick="senha_cadastro()" style="cursor:pointer;">
                                 <div id="olho" class="icon_senha_desativado"></div>
                             </div>
-                            <br>
+                            
                             <span id="span_senha_cadastro">Por favor, insira uma senha com pelo menos 8
                                 caracteres</span>
                         </div>
@@ -124,12 +129,12 @@
                         <label for="ConfirmSenha">Confirmar Senha:</label>
                         <div class="input-div">
                             <img class="icon-input" id="icon_confirmar_senha_input" src="" alt="">
-                            <input data-aos="fade-up" type="email" name="ConfirmSenha" id="conf_senha_input"
-                                placeholder="*************" onblur="validar_conf_senha_cadastro()">
-                                <div onclick="confirmar_senha_cadastro()" style="cursor:pointer;">
+                            <div onclick="confirmar_senha_cadastro()" style="cursor:pointer; position: relative;">
+                                <input data-aos="fade-up" type="password" name="ConfirmSenha" id="conf_senha_input"
+                                    placeholder="*************" onblur="validar_conf_senha_cadastro()">
                                     <div id="olho_confirmar" class="icon_confirmar_desativado"></div>
                                 </div>
-                            <br>
+                            
                             <span id="span_validar_conf_senha">Ops! A senha inserida está incorreta. Por favor,
                                 tente novamente</span>
                         </div>
@@ -144,7 +149,7 @@
                         <img class="icon-input" id="icon_codigo_input" src="" alt="">
                         <input data-aos="fade-up" type="codigo" name="Codigo" id="codigo_input"
                             onblur="validar_codigo()">
-                        <br>
+                        
                         <span id="span_validar_codigo">Por favor, insira um codigo com 5 caracteres</span>
                     </div>
                 </div>
