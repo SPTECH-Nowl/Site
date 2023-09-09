@@ -132,6 +132,87 @@ body {
     flex-wrap: wrap;
 }
 
+.icon{
+    top: 50%;
+    margin-left: 90%;
+    margin-top: -40px;
+    transform: translate(-50%);
+    background: url(../assets/img/Icone/olho\ ativado.png);
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.icon_hide{
+    top: 50%;
+    background: url(../assets/img/Icone/olho\ desativado.png);
+    margin-left: 90%;
+    margin-top: -40px;
+    transform: translate(-50%);
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+
+
+
+.icon_senha{
+    top: 50%;
+    margin-left: 84%;
+    margin-top: -40px;
+    transform: translate(-50%);
+    background: url(../assets/img/Icone/olho\ ativado.png);
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.icon_senha_desativado{
+    top: 50%;
+    background: url(../assets/img/Icone/olho\ desativado.png);
+    margin-left: 84%;
+    margin-top: -40px;
+    transform: translate(-50%);
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+
+.icon_confirmar{
+    top: 50%;
+    margin-left: 84%;
+    margin-top: -40px;
+    transform: translate(-50%);
+    background: url(../assets/img/Icone/olho\ ativado.png);
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+
+
+.icon_confirmar_desativado{
+    top: 50%;
+    margin-left: 70%;
+    margin-top: -40px;
+    transform: translate(-50%);
+    background: url(../assets/img/Icone/olho\ desativado.png);
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+
+
+
 .form button {
     width: 170px;
     height: 50px;
@@ -169,7 +250,7 @@ span {
 }
 
 span:hover {
-    color: var(--color-roxo);
+    color: var(--color-errado);
 }
 
 span.not-valid {
