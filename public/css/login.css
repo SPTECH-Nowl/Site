@@ -27,6 +27,7 @@
 }
 
 body {
+    overflow: hidden;
     background: var(--color-white);
 }
 
@@ -39,7 +40,7 @@ body {
     font-family: "Raleway";
     max-width: 100vw;
     height: 85vh;
-    
+
 
 }
 
@@ -160,13 +161,14 @@ h3 {
     font-weight: 500;
 }
 
-a {
+span {
     transition: all .25s ease-in-out;
     margin-left: 5px;
     color: var(--color-preto);
+    cursor: pointer;
 }
 
-a:hover {
+span:hover {
     color: var(--color-roxo);
 }
 
@@ -219,11 +221,76 @@ span.valid {
 .shake {
     animation: shake 0.3s;
 }
-  
-  @keyframes shake {
-    0% { transform: translateX(0); }
-    25% { transform: translateX(10px); }
-    50% { transform: translateX(-10px); }
-    75% { transform: translateX(10px); }
-    100% { transform: translateX(0); }
-  }
+
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(10px);
+    }
+
+    50% {
+        transform: translateX(-10px);
+    }
+
+    75% {
+        transform: translateX(10px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+main {
+    position: relative;
+}
+
+
+.closeLogin {
+    position: absolute;
+    right: 0;
+    left: 0;
+    animation-name: subir;
+    animation-duration: 1s;
+    top: -96%;
+}
+
+
+@keyframes subir {
+    0% {
+        top: -5%;
+    }
+
+    100% {
+        top: -95%;
+    }
+}
+
+
+.activeLogin{
+    position: absolute;
+    right: 0;
+    left: 0;
+    animation-name: example;
+    animation-duration: 1s;
+}
+
+@keyframes example {
+    0%   {top:  -400px;}
+
+
+    100% {top: 0px}
+}
+
+
+.actve {
+    display: block;
+}
+
+.close {
+display: none;
+}

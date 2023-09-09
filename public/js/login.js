@@ -1,4 +1,7 @@
 
+
+
+
 function validar_email() {
     var input = document.getElementById('email_input');
     var email = email_input.value;
@@ -27,7 +30,7 @@ function validar_senha() {
     var senha = senha_input.value
     var span = document.getElementById('span_validar_senha');
     var icon = document.getElementById('icon_senha_input');
-    
+
     if (senha.length < 8) {
         span.innerHTML = 'Por favor, insira uma senha com pelo menos 8 caracteres';
         span.classList.remove("valid");

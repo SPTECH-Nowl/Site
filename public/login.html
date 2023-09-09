@@ -21,7 +21,7 @@
 
     <main class="main">
 
-        <div class="login-section">
+        <div class="login-section activeLogin " id="loginSection">
 
             <div class="form roxo">
                 <div class="login-header">
@@ -53,17 +53,17 @@
                 </div>
 
                 <button onclick="logar()">Entrar</button>
+                <h3>Não tem conta ainda? <span id="closeLogin"> Cadastre-se </span></h3>
 
-                <h3>Já tem uma conta? <a href="#"> Entre </a></h3>
 
 
             </div>
 
-            <h3>Não tem conta ainda? <a href="#"> Cadastre-se </a></h3>
 
         </div>
 
-        <div class="cadastro-section">
+        <div class="cadastro-section close" id="cadastroSection">
+            <h3>Já tem uma conta? <span id="activeLogin"> Entre </span></h3>
 
             <div class="form white">
 
@@ -142,7 +142,6 @@
 
             </div>
 
-
         </div>
 
     </main>
@@ -152,3 +151,5 @@
 </body>
 
 </html>
+
+<script src="js/trocaMod.js"></script>
