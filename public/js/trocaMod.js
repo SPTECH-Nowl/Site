@@ -40,7 +40,6 @@ mostrarCadastro.addEventListener("click", () => {
         login.classList.remove('activeLogin')
         cadastro.classList.add('active')
         cadastro.classList.remove("close")
-
     }
 })
 

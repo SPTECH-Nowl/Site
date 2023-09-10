@@ -41,7 +41,6 @@ body {
     font-family: "Raleway";
     height: 85vh;
     gap: 1rem;
-
 }
 
 .roxo {
@@ -60,6 +59,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding-top: 6vh;
 }
 
 .login-header img {
@@ -72,7 +72,7 @@ body {
     font-size: 4rem;
     /* margin: 5.5% 0; */
     line-height: 4rem;
-    font-size: 2.5rem;
+    font-size: 4rem;
 }
 
 .campo {
@@ -100,7 +100,6 @@ body {
     font-size: 1rem;
     font-weight: 500;
     font-family: var(--font-title);
-    text-transform: lowercase;
     color: #252525;
 }
 
@@ -113,12 +112,12 @@ body {
     border-radius: 30px;
     font-size: 1.1rem;
     transition: all .25s ease-in-out;
-    background: var(--color-violeta);
-    color: var(--color-preto);
+    background: var(--color-roxo);
+    color: var(--color-white);
 }
 
 .form.roxo input {
-    background: var(--color-roxoEscuro);
+    background: var(--color-roxo);
     color: var(--color-white);
 }
 
@@ -126,12 +125,12 @@ body {
     color: var(--color-roxoEscuro);
     font-family: var(--font-text);
     font-weight: 500;
-    color: #474747db;
+    color: #b99ccb;
     font-family: var(--font-text);
 }
 
 .form.roxo input::placeholder {
-    color: var(--color-roxo);
+    color: #b99ccb;
 }
 
 .form input:focus {
@@ -141,8 +140,14 @@ body {
 
 .campos-linha {
     display: flex;
-    gap: 2rem;
-    width: 50%;
+    gap: 6rem;
+    width: 70%;
+}
+
+.form.white .campos-linha:nth-child(4){
+    gap: 0;
+    align-items: center;
+    justify-content: center;
 }
 
 .icon{
@@ -168,9 +173,6 @@ body {
     height: 30px;
     cursor: pointer;
 }
-
-
-
 
 .icon_senha{
     right: 5px;
@@ -232,7 +234,7 @@ body {
     padding: 0.6rem 1.3rem;
     font-weight: 600;
     font-family: var(--font-title);
-    text-transform: uppercase;
+    text-transform: capitalize;
     border-radius: 25px;
     background: var(--color-white);
     color: var(--color-roxo);
@@ -303,6 +305,10 @@ span.valid {
     position: relative;
 }
 
+.input-div input {
+    width: 100%;
+}
+
 .flex {
     display: flex !important;
 }
@@ -310,12 +316,26 @@ span.valid {
 .icon-input {
     width: 30px;
     position: absolute;
+    top: 15%;
+    left: -10%;
     z-index: 2;
-    top: 10px;
-    left: -10px;
 }
 
-
+.btn-cadastrar {
+    width: 70%;
+    font-size: 20px;
+    padding: 0.6rem 1.3rem;
+    font-weight: 600;
+    font-family: var(--font-title);
+    text-transform: capitalize;
+    border-radius: 25px;
+    background: var(--color-violeta) !important;
+    color: var(--color-white) !important;
+    border: none;
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.25), -6px 6px 4px 0px rgba(0, 0, 0, 0.25) inset;
+    cursor: pointer;
+    transition: all .25s ease-in-out;
+}
 
 .shake {
     animation: shake 0.3s;
@@ -355,7 +375,7 @@ main {
     left: 0;
     animation-name: subir;
     animation-duration: 1s;
-    top: -96%;
+    top: -200%;
     z-index: 2;
 }
 
@@ -366,7 +386,7 @@ main {
     }
 
     100% {
-        top: -95%;
+        top: -200%;
     }
 }
 
@@ -392,7 +412,7 @@ main {
 }
 
 
-.actve {
+.active {
     display: block;
 }
 

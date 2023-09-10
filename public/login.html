@@ -9,6 +9,7 @@
     <title>Magister </title>
 
     <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/loginResponsividade.css">
     <script src="js/login.js"></script>
     <script src="js/cadastro.js"></script>
 
@@ -73,7 +74,7 @@
             <div class="form white">
 
                 <div class="login-header">
-                    <img src="assets/img/Logos/magisterLogo.svg" alt="">
+                    <img src="assets/img/Logos/logoMagisterPreto.svg" alt="">
                     <h1>CADASTRO</h1>
                 </div>
 
@@ -120,8 +121,7 @@
                                 <div id="olho" class="icon_senha_desativado"></div>
                             </div>
                             
-                            <span id="span_senha_cadastro">Por favor, insira uma senha com pelo menos 8
-                                caracteres</span>
+                            <span id="span_senha_cadastro">A senha deve possuir no mínimo 8 caracteres.</span>
                         </div>
                     </div>
                     <div class="campo">
@@ -142,19 +142,20 @@
 
                 </div>
 
-                <div class="campo">
-
-                    <label for="Codigo">Código da Instituição:</label>
-                    <div class="input-div">
-                        <img class="icon-input" id="icon_codigo_input" src="" alt="">
-                        <input data-aos="fade-up" type="codigo" name="Codigo" id="codigo_input"
-                            onblur="validar_codigo()">
-                        
-                        <span id="span_validar_codigo">Por favor, insira um codigo com 5 caracteres</span>
+                <div class="campos-linha">
+                    <div class="campo">
+                        <label for="Codigo">Código da Instituição:</label>
+                        <div class="input-div">
+                            <img class="icon-input" id="icon_codigo_input" src="" alt="">
+                            <input data-aos="fade-up" type="codigo" name="Codigo" id="codigo_input"
+                                onblur="validar_codigo()" placeholder="sUU30fsG9mkW">
+                    
+                            <span id="span_validar_codigo">Por favor, insira um codigo com 5 caracteres</span>
+                        </div>
                     </div>
                 </div>
 
-                <button onclick="cadastrar()">Cadastrar</button>
+                <button onclick="cadastrar()" class="btn-cadastrar">Cadastrar</button>
 
             </div>
 
