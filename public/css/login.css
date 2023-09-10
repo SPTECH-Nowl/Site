@@ -246,7 +246,7 @@ body {
 }
 
 .form button:hover {
-    background: var(--color-roxo);
+    background: var(--color-violeta);
     color: var(--color-white);
 }
 
@@ -374,7 +374,7 @@ main {
     left: 0;
     animation-name: subir;
     animation-duration: 1s;
-    top: -200%;
+    top: -96%;
     z-index: 2;
 }
 
@@ -385,7 +385,7 @@ main {
     }
 
     100% {
-        top: -200%;
+        top: -96%;
     }
 }
 

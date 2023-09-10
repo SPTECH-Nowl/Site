@@ -80,4 +80,18 @@
    .btn-cadastrar {
       width: 70%;
    }
+
+   .closeLogin {
+      top: -200%;
+   }
+
+   @keyframes subir {
+      0% {
+          top: -5%;
+      }
+  
+      100% {
+          top: -200%;
+      }
+  }
 }
