@@ -112,6 +112,8 @@ header {
     transition: .3s ease-in;
 }
 
+
+
 .navLink::after {
     content: '';
     position: absolute;
@@ -175,6 +177,10 @@ header {
     user-select: none;
 }
 
+.navMobileWrapper{
+    display: none;
+}
+
 /* tinha feito essa animação em uma outra página vazia de testes e lá tava funcionando normal, aqui ela quebrou completamente */
 /* 
 .scrollWrapper {
@@ -229,6 +235,10 @@ header {
     align-items: flex-start;
     }
 } */
+
+header{
+    position: relative;
+}
 
 .headerUpper {
     display: flex;
@@ -501,10 +511,10 @@ highlight {
 }
 
 .circle3 {
-    width: 20rem;
-    height: 20rem;
+    width: 18rem;
+    height: 18rem;
     border: 10px solid;
-    right: -1vw;
+    right: 1vw;
     top: 100vh;
 }
 

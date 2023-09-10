@@ -137,7 +137,7 @@ function hide_navbar() {
             logo.style.opacity = 0;
             navWrapper.style.userSelect = "none";
             arrow.style.transform = "rotate(180deg)";
-            navbarHidden = true;
+            navbarHidden = true;    
         } else {
             navbar.style.transform = "translateY(0%)";
             logo.style.opacity = 1;
@@ -148,3 +148,30 @@ function hide_navbar() {
     }
 }
 
+
+
+var menuSwitch = document.getElementById("menuSwitch")
+var nav = document.getElementById("navMobile")
+
+var sectionsArray = document.getElementsByTagName("section")
+
+menuSwitch.addEventListener("click", function(){
+    if (nav.style.display === "flex") {
+        nav.style.display = "none"
+        menuSwitch.style.color = "white"
+        nav.classList.remove("requires-no-scroll")
+
+        for(i = 0; i < sectionsArray.length; i++){
+            sectionsArray[i].style.filter = "brightness(1)"
+        }
+
+    } else {
+        nav.style.display = "flex"
+
+        for(i = 0; i < sectionsArray.length; i++){
+            sectionsArray[i].style.filter = "brightness(0.7)"
+        }
+        menuSwitch.style.color = "black"
+        nav.classList.add("requires-no-scroll")
+    }
+});
