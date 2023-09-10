@@ -76,4 +76,8 @@
       display: flex;
       width: 100%;
    }
+
+   .btn-cadastrar {
+      width: 70%;
+   }
 }
