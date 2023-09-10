@@ -53,6 +53,10 @@ body::-webkit-scrollbar-thumb {
     border-radius: 5px;
 }
 
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
 
 
 header {
@@ -264,10 +268,15 @@ highlight {
     border-radius: 5rem;
     border: none;
     color: var(--color-white);
-    font-family: "Inter";
+    font-family: "Kanit";
     font-weight: bold;
     font-size: 1.2rem;
     cursor: pointer;
+    transition: .4s ease-in-out;
+}
+
+.btn-header:hover {
+    background-color: #f47878;
 }
 
 .btnHeaderWrapper >:nth-child(1){
@@ -297,8 +306,11 @@ highlight {
     align-items: center;
     justify-content: center;
     gap: 7px;
-    bottom: 15vh;
+    bottom: 5vh;
     right: 15vw;
+    transition: .4s ease-in-out;
+    opacity: 1;
+    user-select: none;
 }
 
 .scroll-sign img {
@@ -306,29 +318,14 @@ highlight {
 }
 
 .scroll-sign img:nth-child(1) {
-    animation: subidinha 4s ease-in-out infinite;
+    animation: pulo 2s ease-in-out infinite;
 }
 
 .scroll-sign img:nth-child(2) {
     animation: pulo 2s ease-in-out infinite;
 }
 
-@keyframes subidinha {
-    0% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-6px);
-    }
-
-    100% {
-        transform: translateY(0);
-    }
-}
-
 @keyframes pulo {
-
     0%,
     20%,
     50%,
@@ -610,9 +607,8 @@ carrosel
     position: relative;
     flex-direction: column;
     width: 100%;
-    height: 100vh;
-    gap: 10vh;
-    padding: 17vh;
+    height: fit-content;
+    padding: 17vh 17vh 17vh 17vh;
     background-color: #F5F5F5;
 }
 
@@ -621,45 +617,55 @@ carrosel
     text-transform: uppercase;
     color: var(--color-cobalto);
     font-size: 3rem;
+    text-align: center;
 }
 
-
+#fale-conosco p {
+    font-size: 1.5rem;
+    margin: 4vh 0;
+    text-align: center;
+    font-weight: 500;
+}
 
 #fale-conosco > div {
     display: flex;
-    justify-content: space-between;
-    gap: 3vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .fale-conosco-inputs {
     width: 45%;
     display: flex;
     flex-direction: column;
-    gap: 3vh;
+}
+
+.input-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
 .fale-conosco-span {
+    font-family: "Raleway";
+    font-weight: 600;
     color: var(--color-cobalto);
     font-size: 1.5rem;
 }
 
 .fale-conosco-inputs input {
-    padding: 10px;
-    width: 397px;
-    border-radius: 6px;
-    border: 3px var(--color-coral) solid;
-    font-size: 15px;
-    font-family: 'Mulish';
+    padding: 12px;
+    border-radius: 32px;
+    border: 2px solid transparent;
+    background-color: #d9d9d9;
+    transition: .3s ease-in-out;
+    font-family: "Raleway";
 }
 
-.fale-conosco-inputs input:focus {
+.fale-conosco-inputs input:focus, 
+.fale-conosco-comunicado textarea:focus {
+    border: 2px solid var(--color-cobalto);
     outline: none;
-    border-bottom: 2px solid var(--color-violeta);
-}
-
-.fale-conosco-inputs input:hover {
-    border-radius: 15px;
-    transition: 0.5s;
 }
 
 .fale-conosco-comunicado {
@@ -670,33 +676,43 @@ carrosel
 
 .fale-conosco-comunicado textarea {
     resize: none;
-    padding: 15px;
-    border-radius: 10px;
-    border: 3px var(--color-coral) solid;
-    font-size: 15px;
-    font-family: 'Mulish';
+    padding: 12px;
+    border-radius: 16px;
+    border: 2px solid transparent;
+    background-color: #d9d9d9;
+    transition: .3s ease-in-out;
+    font-family: "Raleway";
 }
 
 
+.fale-conosco-inputs input:hover,
 .fale-conosco-comunicado textarea:hover {
-    border-radius: 20px;
-    transition: 0.5s;
-    border-bottom: 2px solid var(--color-violeta);
+    background-color: #d4d4d4;
+}
+
+#span_validar_nome,
+#span_validar_assunto,
+#span_validar_email_contato {
+    font-family: "Raleway" !important;
+    height: 0.8rem;
+    color: green;
+    margin: 4px 0;
+ 
 }
 
 .btn-fale-conosco {
     color: #fff;
-    font-size: 15px;
+    font-size: 1.8rem !important;
+    font-family: "Kanit";
     font-weight: 600;
-    padding: 10px;
-    width: 150px;
+    padding: 8px;
     border-radius: 32px;
     border: none;
     background-color: #F05D5E;
     font-size: 15px;
-    align-self: flex-end;
-    margin-right: 1vw;
-    margin-top: 40px;
+    margin-top: 4vh;
+    cursor: pointer;
+    transition: .3s ease-in-out;
 }
 
 .shake {
@@ -714,9 +730,7 @@ carrosel
 
   
 .btn-fale-conosco:hover {
-    color: #314cb6;
-    border-radius: 14px;
-    transition: 0.7s;
+    background-color: #f47878;
 }
 
 

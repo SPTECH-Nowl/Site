@@ -48,8 +48,8 @@
                     <div class="btnHeaderWrapper">
                         <img src="assets/img/setaBaixo.svg" alt="" class="setaBaixo">
                         <a href="#quem-somos" id="btn-header">
-                            <button class="btn-header" >SAIBA MAIS</button></a>
-                            <div class="scroll-sign ">
+                            <button class="btn-header" >Saiba mais!</button></a>
+                            <div class="scroll-sign" id="scrollSign">
                                 <img src="./assets/img/Icone/mouse.png" alt="Mouse sinalizador de scroll">
                                 <img src="./assets/img/Icone/seta.png" alt="Seta">
                             </div>
@@ -157,25 +157,40 @@
    
     <section id="fale-conosco">
         <h1 class="titulo-section select-disable">Fale Conosco</h1>
+        <p>Se interessou por nosso serviços e deseja nos contatar para adquirir uma de nossas soluções ou deseja solicitar sua própria solução para negócio? Nos envie uma mensagem através do formulário abaixo!</p>
         <div>
             <div class="fale-conosco-inputs">
-                <span class="fale-conosco-span">Nome</span>
-                <input data-aos="fade-right" data-aos-duration="700" id="input_nome" placeholder="Digite seu nome" 
-                    required  onkeyup="validar_nome()" >
-                    <span id="span_validar_nome"></span>
-                <span class="fale-conosco-span">Assunto</span>
-                <input data-aos="fade-right" data-aos-duration="700" id="input_assunto" placeholder="Digite o assunto" "
-                    required onkeyup="validar_assunto()" >
-                    <span id="span_validar_assunto"></span>
-                <span class="fale-conosco-span">E-mail</span>
-                <input data-aos="fade-right" data-aos-duration="700" id="input_email" placeholder="Digite seu e-mail" =
-                    required onkeyup="validar_email_contato()" >
-                    <span id="span_validar_email_contato"></span>
+                <div class="input-field">
+                    <span class="fale-conosco-span">Nome</span>
+                    <div class="flex-col">
+                        <input data-aos="fade-right" data-aos-duration="700" id="input_nome" placeholder="Digite seu nome"
+                            required  onblur="validar_nome()" >
+                        <span id="span_validar_nome"></span>
+                    </div>
+                </div>
+                <div class="input-field">
+                    <span class="fale-conosco-span">Assunto</span>
+                    <div class="flex-col">
+                        <input data-aos="fade-right" data-aos-duration="700" id="input_assunto" placeholder="Digite o assunto" "
+                            required onblur="validar_assunto()" >
+                            <span id="span_validar_assunto"></span>
+                    </div>
+                </div>
+                <div class="input-field">
+                    <span class="fale-conosco-span">E-mail</span>
+                    <div class="flex-col">
+                        <input data-aos="fade-right" data-aos-duration="700" id="input_email" placeholder="Digite seu e-mail" =
+                            required onblur="validar_email_contato()" >
+                            <span id="span_validar_email_contato"></span>
+                    </div>
+                </div>
             </div>
             <div class="fale-conosco-comunicado">
-                <span class="fale-conosco-span">Escreva uma mensagem</span>
-                <textarea data-aos="fade-right" data-aos-duration="700" id="input_comunicado" cols="30" rows="10"
-                    placeholder="Escreva aqui!" required></textarea>
+                <div class="input-field">
+                    <span class="fale-conosco-span">Escreva uma mensagem</span>
+                    <textarea data-aos="fade-right" data-aos-duration="700" id="input_comunicado" cols="30" rows="10"
+                        placeholder="Escreva aqui!" required></textarea>
+                </div>
 
                 <button class="btn-fale-conosco select-disable" onclick="enviar()" id="enviar">Enviar</button>
             </div>

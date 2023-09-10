@@ -13,11 +13,11 @@ function enviar() {
     else if (ctNome.length < 3) {
         swal("Ops", "O nome inserido é muito curto. Por favor, insira um nome com pelo menos 3 caracteres 😠", "warning")
     }
-    else if (ctEmail.indexOf("gmail") == -1 && ctEmail.indexOf("@") == -1 && ctEmail.indexOf(".com") == -1 && ctEmail.length < 10) {
+    else if (ctEmail.indexOf("gmail") == -1 && ctEmail.indexOf("@") == -1 && ctEmail.indexOf(".") == -1 && ctEmail.length < 10) {
         swal("Ops", "O e-mail cadastrado é inválido. insira um e-mail válido 😠", "warning")
     }
     else {
-        swal("Parábens", "Mensagem enviada com sucesso, aguarde nosso contato 😄!", "success");
+        swal("Sua mensagem foi enviada!", "Aguarde o contato de nossa equipe no email informado.", "success");
 
         setTimeout(() => {
             window.location = "index.html";
@@ -30,11 +30,13 @@ window.onscroll = () => {
     var navLinkArray = document.getElementsByClassName("navLink");
     var logo = document.getElementById("logo");
     var navWrapper = document.getElementById("navWrapper");
+    var scrollSign = document.getElementById("scrollSign")
 
     if (window.scrollY != 0) {
         navbar.classList.add("navbar-ativo");
         logo.src = "assets/img/Logos/nowlLogoPreta.svg";
         logo.style.width = "7.5rem";
+        scrollSign.style.opacity = 0;
         navWrapper.classList.add("navWrapperAtivo");
         for (var i = 0; i < navLinkArray.length; i++) {
             var link = navLinkArray[i];
@@ -44,6 +46,7 @@ window.onscroll = () => {
         navbar.classList.remove("navbar-ativo");
         logo.src = "assets/img/Logos/nowLogo.svg";
         logo.style.width = "10rem";
+        scrollSign.style.opacity = 1;
         navWrapper.classList.remove("navWrapperAtivo");
         for (var i = 0; i < navLinkArray.length; i++) {
             var link = navLinkArray[i];
@@ -58,21 +61,16 @@ function validar_nome() {
     var span = document.getElementById('span_validar_nome')
 
     if (nome.length < 3) {
-        span.style.color = 'red'
-        span.innerHTML = 'O nome inserio é inválido. Por favor, insira um nome válido.'
-        span.style.marginTop = '-20px'
-        span.style.fontFamily = 'Mulish'
-        span.style.fontSize = '11px'
+        span.style.color = 'red';
         input.style.borderColor = 'red'
+        span.innerHTML = 'O nome deve possuir pelo menos dois caracteres.'
         input.classList.add("shake");
     }
     else {
         span.innerHTML = ''
-        span.style.fontFamily = 'Mulish'
-        span.style.fontSize = '15px'
-        input.style.borderColor = 'green'
-        span.style.color = 'green'
-        span.innerHTML = 'O nome está validado'
+        span.style.color = "green";
+        input.style.borderColor = "#d9d9d9";
+        span.innerHTML = 'O nome inserido é válido.'
         input.classList.remove("shake");
     }
 }
@@ -82,22 +80,17 @@ function validar_assunto() {
     var assunto = input_assunto.value
     var span = document.getElementById('span_validar_assunto')
 
-    if (assunto.length < 5) {
+    if (assunto.length < 2) {
         span.style.color = 'red'
-        span.innerHTML = 'O assunto é muito curta. Por favor, insira um assunto válido'
-        span.style.fontFamily = 'Mulish'
-        span.style.fontSize = '10px'
         input.style.borderColor = 'red'
-        span.style.marginTop = '-20px'
+        span.innerHTML = 'O assunto deve possuir pelo menos 3 caracteres'
         input.classList.add("shake");
     }
     else {
         span.innerHTML = ''
-        span.style.color = 'green'
-        span.style.fontFamily = 'Mulish'
-        span.style.fontSize = '15px'
-        input.style.borderColor = 'green'
-        span.innerHTML = 'A assunto inserido é valido'
+        span.style.color = "green";
+        input.style.borderColor = "#d9d9d9";
+        span.innerHTML = 'O assunto inserido é válido'
         input.classList.remove("shake");
     }
 }
@@ -107,22 +100,17 @@ function validar_email_contato() {
     var email_contato = input_email.value
     var span = document.getElementById('span_validar_email_contato')
 
-    if (email_contato.indexOf("@") == -1 || email_contato.indexOf(".com") == -1 || email_contato.length < 7) {
+    if (email_contato.indexOf("@") == -1 || email_contato.indexOf(".") == -1 || email_contato.length < 5) {
         span.style.color = 'red'
-        span.innerHTML = 'O e-mail cadastrado é inválido. Por favor, insira um e-mail válido.'
-        span.style.marginTop = '-20px'
-        span.style.fontFamily = 'Mulish'
-        span.style.fontSize = '11px'
         input.style.borderColor = 'red'
+        span.innerHTML = 'O e-mail cadastrado é inválido.'
         input.classList.add("shake");
     }
     else {
         span.innerHTML = ''
-        span.style.fontFamily = 'Mulish'
-        span.style.fontSize = '15px'
-        input.style.borderColor = 'green'
-        span.style.color = 'green'
-        span.innerHTML = 'O email está validado'
+        span.style.color = 'green';
+        input.style.borderColor = "#d9d9d9";
+        span.innerHTML = 'O email inserido é válido.'
         input.classList.remove("shake");
     }
 }
