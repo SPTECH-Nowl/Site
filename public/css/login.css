@@ -254,7 +254,7 @@ h3 {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 2%;
+    margin-top: 6%;
     color: var(--color-preto);
     font-family: var(--font-title);
     font-weight: 500;
@@ -266,7 +266,10 @@ span {
     cursor: pointer;
 }
 
-
+.span-login {
+    position: absolute;
+    bottom: -10%;
+}
 
 span.not-valid {
     color: rgb(255, 0, 0);

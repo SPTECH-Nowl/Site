@@ -72,7 +72,7 @@ header {
     align-items: center;
     position: fixed;
     padding: 3rem 0;
-    transition:  .3s ease-in-out;
+    transition: .3s ease-in-out;
     z-index: 1;
 }
 
@@ -146,6 +146,35 @@ header {
     cursor: pointer;
 
 }
+
+#toggle_nav_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 1.35rem;
+    height: 1.35rem;
+    bottom: -12%;
+    border-radius: 50px;
+    background: rgba( 255, 255, 255, 0.55 );
+    backdrop-filter: blur( 8px );
+    -webkit-backdrop-filter: blur( 8px );
+    border-radius: 10px;
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.10),
+    0px 2px 2px 0px rgba(0, 0, 0, 0.09), 
+    0px 6px 3px 0px rgba(0, 0, 0, 0.05), 
+    0px 10px 4px 0px rgba(0, 0, 0, 0.01), 
+    0px 15px 4px 0px rgba(0, 0, 0, 0.00);
+    transition: .3s ease-in-out;
+    cursor: pointer;
+}
+
+#toggle_nav_button img {
+    width: 0.7rem;
+    transition: .3s ease-in-out;
+    user-select: none;
+}
+
 /* tinha feito essa animação em uma outra página vazia de testes e lá tava funcionando normal, aqui ela quebrou completamente */
 /* 
 .scrollWrapper {
@@ -544,8 +573,9 @@ highlight {
     height: 100vh;
     margin-top: 6vh;
     margin-bottom: 2vh;
-    background-color: #D9D9D9;
+    background-color: #FEFEFE;
     border-radius: 10px;
+    box-shadow: 0px 5px 11px 0px rgba(0, 0, 0, 0.10), 0px 21px 21px 0px rgba(0, 0, 0, 0.09), 0px 46px 28px 0px rgba(0, 0, 0, 0.05), 0px 82px 33px 0px rgba(0, 0, 0, 0.01), 0px 129px 36px 0px rgba(0, 0, 0, 0.00);
  }
 
 .projetoPrincipal img {
@@ -553,6 +583,7 @@ highlight {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    background-position: 200px;
 }
 
 .h1_mobile {

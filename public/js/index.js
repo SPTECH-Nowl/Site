@@ -3,7 +3,8 @@ window.onscroll = () => {
     var navLinkArray = document.getElementsByClassName("navLink");
     var logo = document.getElementById("logo");
     var navWrapper = document.getElementById("navWrapper");
-    var scrollSign = document.getElementById("scrollSign")
+    var scrollSign = document.getElementById("scrollSign");
+    var hideNavButton = document.getElementById("toggle_nav_button");
 
     if (window.scrollY != 0) {
         navbar.classList.add("navbar-ativo");
@@ -15,16 +16,23 @@ window.onscroll = () => {
             var link = navLinkArray[i];
             link.classList.add("navLinkAtivo");
         }
+        hideNavButton.style.opacity = "1";
     } else {
         navbar.classList.remove("navbar-ativo");
         logo.src = "assets/img/Logos/nowLogo.svg";
         logo.style.width = "10rem";
+        logo.style.opacity = 1;
         scrollSign.style.opacity = 1;
         navWrapper.classList.remove("navWrapperAtivo");
         for (var i = 0; i < navLinkArray.length; i++) {
             var link = navLinkArray[i];
             link.classList.remove("navLinkAtivo");
         }
+        navbar.style.transform = "translateY(0%)";
+        navWrapper.style.userSelect = "all";
+        navHidden = false;
+        hideNavButton.style.opacity = "0";  
+        arrow.style.transform = "rotate(0deg)"
     }
 }
 
@@ -115,3 +123,28 @@ function enviar() {
         }, 3000)
     }
 }
+
+var navbarHidden = false;
+function hide_navbar() {
+    var navbar = document.getElementById("navbar");
+    var navWrapper = document.getElementById("navWrapper");
+    var logo = document.getElementById("logo");
+    var arrow = document.getElementById("arrow");
+
+    if(window.scrollY != 0) {
+        if(!navbarHidden) {
+            navbar.style.transform = "translateY(-70%)";
+            logo.style.opacity = 0;
+            navWrapper.style.userSelect = "none";
+            arrow.style.transform = "rotate(180deg)";
+            navbarHidden = true;
+        } else {
+            navbar.style.transform = "translateY(0%)";
+            logo.style.opacity = 1;
+            navWrapper.style.userSelect = "all";
+            arrow.style.transform = "rotate(0deg)"
+            navbarHidden = false;
+        }
+    }
+}
+
