@@ -193,5 +193,13 @@ function logar() {
     return false;
 }
 
+function logar_teste() {
+    var email = document.getElementById("email_input").value;
+    var senha = document.getElementById("senha_input").value;
 
-
+    if(email == "admin@email.com" && senha == "123") {
+        window.location.href = "dashboard.html"
+    } else {
+        alert('falso porra')
+    }
+}
