@@ -254,7 +254,7 @@ h3 {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 6%;
+    margin-top: 3%;
     color: var(--color-preto);
     font-family: var(--font-title);
     font-weight: 500;

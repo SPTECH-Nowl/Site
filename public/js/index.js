@@ -5,6 +5,7 @@ window.onscroll = () => {
     var navWrapper = document.getElementById("navWrapper");
     var scrollSign = document.getElementById("scrollSign");
     var hideNavButton = document.getElementById("toggle_nav_button");
+    var menuSwitch = document.getElementById("menuSwitch");
 
     if (window.scrollY != 0) {
         navbar.classList.add("navbar-ativo");
@@ -12,6 +13,7 @@ window.onscroll = () => {
         logo.style.width = "7.5rem";
         scrollSign.style.opacity = 0;
         navWrapper.classList.add("navWrapperAtivo");
+        menuSwitch.style.color = "black";
         for (var i = 0; i < navLinkArray.length; i++) {
             var link = navLinkArray[i];
             link.classList.add("navLinkAtivo");
@@ -23,6 +25,7 @@ window.onscroll = () => {
         logo.style.width = "10rem";
         logo.style.opacity = 1;
         scrollSign.style.opacity = 1;
+        menuSwitch.style.color = "white";
         navWrapper.classList.remove("navWrapperAtivo");
         for (var i = 0; i < navLinkArray.length; i++) {
             var link = navLinkArray[i];
@@ -150,15 +153,14 @@ function hide_navbar() {
 
 
 
-var menuSwitch = document.getElementById("menuSwitch")
-var nav = document.getElementById("navMobile")
-
-var sectionsArray = document.getElementsByTagName("section")
+var menuSwitch = document.getElementById("menuSwitch");
+var nav = document.getElementById("navMobile");
+var sectionsArray = document.getElementsByTagName("section");
 
 menuSwitch.addEventListener("click", function(){
     if (nav.style.display === "flex") {
         nav.style.display = "none"
-        menuSwitch.style.color = "white"
+        menuSwitch.style.color = "#F05D5E"
         nav.classList.remove("requires-no-scroll")
 
         for(i = 0; i < sectionsArray.length; i++){
