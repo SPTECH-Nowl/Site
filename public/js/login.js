@@ -168,10 +168,10 @@ function logar() {
 
                 sessionStorage.EMAIL_USUARIO = json.email;
                 sessionStorage.NOME_USUARIO = json.nome;
-                sessionStorage.ID_USUARIO = json.id;
+                
 
                 setTimeout(function () {
-                    window.location = "index.html";
+                    window.location = "dashboard.html";
                 }, 1000);
 
             });
@@ -182,7 +182,7 @@ function logar() {
 
             resposta.text().then(texto => {
                 console.error(texto);
-                //    finalizarAguardar(texto);
+                finalizarAguardar(texto);
             });
         }
 
@@ -192,6 +192,7 @@ function logar() {
 
     return false;
 }
+
 
 function logar_teste() {
     var email = document.getElementById("email_input").value;
@@ -203,3 +204,4 @@ function logar_teste() {
         alert('falso porra')
     }
 }
+

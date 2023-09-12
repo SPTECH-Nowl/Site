@@ -133,9 +133,9 @@ function cadastrar() {
     var emailVar = email_input_cadastro.value;
     var senhaVar = senha_input_cadastro.value;
     var confirmar_senhaVar = conf_senha_input.value;
-    var codigo = codigo_input.value;
+    var codigoVar = codigo_input.value;
 
-    if (nomeVar ==""||emailVar == "" || senhaVar == ""||confirmar_senhaVar ==""|| codigo =="") {
+    if (nomeVar ==""||emailVar == "" || senhaVar == ""||confirmar_senhaVar ==""|| codigoVar =="") {
         // cardErro.style.display = "block"
         swal("Ops", "Preencha os campos para logar!", "error")
         //    finalizarAguardar();
@@ -154,7 +154,7 @@ else if (senhaVar.length < 8) {
 else if (confirmar_senhaVar != senhaVar) {
     swal("Ops", "As senhas não coincidem", "warning")
 }
-else if (codigo == 5) {
+else if (codigoVar == 5) {
     swal("Ops", "Codigo inválido, apenas 5 caracteres.", "warning")
 }
 else {
@@ -164,10 +164,11 @@ else {
     console.log("FORM NOME: ", nomeVar);
     console.log("FORM EMAIL: ", emailVar);
     console.log("FORM SENHA: ", senhaVar);
-    console.log("FORM CONFIRMAR-SENHA: ", confirmar_senhaVarVar);
+    console.log("FORM CONFIRMAR-SENHA: ", confirmar_senhaVar);
     console.log("FORM CODIGO: ", codigoVar);
 
-    fetch("/usuarios/autenticar", {
+
+    fetch("/usuarios/cadastrar", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -176,44 +177,38 @@ else {
             nomeServer: nomeVar,
             emailServer: emailVar,
             senhaServer: senhaVar,
-            confirmar_senhaServer: confirmar_senhaVarVar,
+            confirmar_senhaServer: confirmar_senhaVar,
             codigoServer: codigoVar
         })
     }).then(function (resposta) {
-        console.log("ESTOU NO THEN DO entrar()!")
+
+        console.log("resposta: ", resposta);
 
         if (resposta.ok) {
-            console.log("Os dados é " + resposta);
+            //cardErro.style.display = "block";
+            swal("Bom trabalho!", "Cadastro realizado com sucesso redirecionando a tela de login...!", "success");
 
-            resposta.json().then(json => {
-                console.log(json);
-                console.log(JSON.stringify(json));
+            setTimeout(() => {
+                window.location = "login.html";
+            }, "2000")
 
-                sessionStorage.EMAIL_USUARIO = json.email;
-                sessionStorage.NOME_USUARIO = json.nome;
-                sessionStorage.ID_USUARIO = json.id;
 
-                setTimeout(function () {
-                    window.location = "index.html";
-                }, 1000);
-
-            });
-
+            limparFormulario();
+            finalizarAguardar();
         } else {
-
-            swal("Ops", "Email e/ou senha inválido(s)", "error")
-
-            resposta.text().then(texto => {
-                console.error(texto);
-                //    finalizarAguardar(texto);
-            });
+            swal("Ops", "Houve um erro ao fazer o cadastro", "error")
         }
-
-    }).catch(function (erro) {
-        console.log(erro);
-    })
+    }).catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+        finalizarAguardar();
+    });
 
     return false;
+
+
+
 }
 
-
+//function sumirMensagem() {
+    //cardErro.style.display = "none"
+//}

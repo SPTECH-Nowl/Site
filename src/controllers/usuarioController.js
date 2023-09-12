@@ -53,24 +53,27 @@ function autenticar(req, res) {
 
 function cadastrar(req, res) {
     // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
-    var nome = req.body.nomeServer;
-    var email = req.body.emailServer;
-    var senha = req.body.senhaServer;
-    var empresaId = req.body.empresaServer;
+    var nomeVar = req.body.nomeServer;
+    var emailVar = req.body.emailServer;
+    var senhaVar = req.body.senhaServer;
+    var confirmação_senhaVar = req.body.confirmação_senhaServer;
+    var codigoVar = req.body.codigoServer;
 
     // Faça as validações dos valores
-    if (nome == undefined) {
+    if (nomeVar == undefined) {
         res.status(400).send("Seu nome está undefined!");
-    } else if (email == undefined) {
+    } else if (emailVar == undefined) {
         res.status(400).send("Seu email está undefined!");
-    } else if (senha == undefined) {
+    } else if (senhaVar == undefined) {
         res.status(400).send("Sua senha está undefined!");
-    } else if (empresaId == undefined) {
+    } else if (confirmação_senhaVar == undefined) {
+        res.status(400).send("Sua empresa está undefined!");
+    } else if (codigoVar == undefined) {
         res.status(400).send("Sua empresa está undefined!");
     } else {
 
         // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
-        usuarioModel.cadastrar(nome, email, senha, empresaId)
+        usuarioModel.cadastrar(nomeVar, emailVar, senhaVar, confirmação_senhaVar,codigoVar)
             .then(
                 function (resultado) {
                     res.json(resultado);
