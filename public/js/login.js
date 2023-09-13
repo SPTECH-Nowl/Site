@@ -130,78 +130,68 @@ function validar_senha() {
 }
 
 
-function logar() {
+function entrar() {
+
+
     var emailVar = email_input.value;
     var senhaVar = senha_input.value;
 
     if (emailVar == "" || senhaVar == "") {
         // cardErro.style.display = "block"
-        swal("Ops", "Preencha os campos para logar!", "error")
-        //    finalizarAguardar();
+        swal("Ops", "Preencha os campos para logar 😠!", "error")
+        finalizarAguardar();
         return false;
     }
     else {
-        setInterval('...', 5000)
-    }
+        swal("Parábens", "Login realizado!!, redirecionando para dashboard", "success");
+        setInterval('...', 2000)
 
-    console.log("FORM LOGIN: ", emailVar);
-    console.log("FORM SENHA: ", senhaVar);
 
-    fetch("/usuarios/autenticar", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-            emailServer: emailVar,
-            senhaServer: senhaVar
+        console.log("FORM LOGIN: ", emailVar);
+        console.log("FORM SENHA: ", senhaVar);
+
+        fetch("/usuarios/entrar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                emailServer: emailVar,
+                senhaServer: senhaVar
+            })
+        }).then(function (resposta) {
+            console.log("ESTOU NO THEN DO entrar()!")
+
+            if (resposta.ok) {
+                console.log(resposta);
+
+                resposta.json().then(json => {
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+
+                    sessionStorage.EMAIL_USUARIO = json.email;
+                    sessionStorage.NOME_USUARIO = json.nome;
+                    sessionStorage.ID_USUARIO = json.idUsuario;
+
+                    setTimeout(function () {
+                        window.location = "dashboard.html";
+                    }, 3000); // apenas para exibir o loading
+
+                });
+
+            } else {
+
+                swal("Ops", "Email e/ou senha inválido(s)", "error")
+
+                resposta.text().then(texto => {
+                });
+            }
+
+        }).catch(function (erro) {
+            console.log(erro);
         })
-    }).then(function (resposta) {
-        console.log("ESTOU NO THEN DO entrar()!")
 
-        if (resposta.ok) {
-            console.log("Os dados é " + resposta);
-            swal("Bom trabalho!","Login realizado, redirecionando para a dashboard","sucess")
-            resposta.json().then(json => {
-                console.log(json);
-                console.log(JSON.stringify(json));
-
-                sessionStorage.EMAIL_USUARIO = json.email;
-                sessionStorage.NOME_USUARIO = json.nome;
-                
-
-                setTimeout(function () {
-                    window.location = "dashboard.html";
-                }, 1000);
-
-            });
-
-        } else {
-
-            swal("Ops", "Email e/ou senha inválido(s)", "error")
-
-            resposta.text().then(texto => {
-                console.error(texto);
-                finalizarAguardar(texto);
-            });
-        }
-
-    }).catch(function (erro) {
-        console.log(erro);
-    })
-
-    return false;
-}
-
-
-function logar_teste() {
-    var email = document.getElementById("email_input").value;
-    var senha = document.getElementById("senha_input").value;
-
-    if(email == "admin@email.com" && senha == "123") {
-        window.location.href = "dashboard.html"
-    } else {
-        alert('falso porra')
+        return false;
     }
 }
-
+    
