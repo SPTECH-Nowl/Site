@@ -4,14 +4,19 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="css/global.css">
    <link rel="stylesheet" href="css/dashboard.css">
-   <title>Document</title>
+   
+   <link rel="shortcut icon" href="assets/img/Logos/magisterLogo.svg" type="image/x-icon">
+   <title>Dashboard</title>
 </head>
 <body>
    <div class="side-menu">
       <img src="assets/img/elements/wave-menu.svg" alt="" class="wave-menu">
       <div class="user-profile">
          <div id="pfp"></div>
-         <span id="nome_user">Usuário</span>
+         <div class="texto-user">
+            <span>Bem-vindo,</span>
+            <span id="usuario">Bem vindo</span>
+        </div>
       </div>
 
       <ul class="nav-list">
@@ -85,3 +90,7 @@
    </div>
 </body>
 </html>
+
+<script>
+     usuario.innerHTML = sessionStorage.NOME_USUARIO
+</script>

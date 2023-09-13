@@ -101,8 +101,8 @@ function validar_codigo() {
     var span = document.getElementById('span_validar_codigo');
     var icon = document.getElementById('icon_codigo_input');
     
-    if (codigo.length  != 6) {
-        span.innerHTML = 'Códigos de intituição devem possuir pelo menos 6 caracteres.';
+    if (codigo.length  != ~5) {
+        span.innerHTML = 'Códigos de intituição devem possuir pelo menos 5 caracteres.';
         span.classList.remove("valid");
         span.classList.add("not-valid");
         input.classList.add("shake");
@@ -154,7 +154,7 @@ else if (senhaVar.length < 8) {
 else if (confirmar_senhaVar != senhaVar) {
     swal("Ops", "As senhas não coincidem", "warning")
 }
-else if (codigoVar == 5) {
+else if (codigoVar != 5) {
     swal("Ops", "Codigo inválido, apenas 5 caracteres.", "warning")
 }
 else {
@@ -207,7 +207,3 @@ else {
 
 
 }
-
-//function sumirMensagem() {
-    //cardErro.style.display = "none"
-//}
