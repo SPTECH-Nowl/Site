@@ -193,8 +193,7 @@ else {
             }, "2000")
 
 
-            limparFormulario();
-            finalizarAguardar();
+            
         } else {
             swal("Ops", "Houve um erro ao fazer o cadastro", "error")
         }

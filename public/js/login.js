@@ -161,7 +161,7 @@ function logar() {
 
         if (resposta.ok) {
             console.log("Os dados é " + resposta);
-
+            swal("Bom trabalho!","Login realizado, redirecionando para a dashboard","sucess")
             resposta.json().then(json => {
                 console.log(json);
                 console.log(JSON.stringify(json));

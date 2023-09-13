@@ -56,7 +56,7 @@ function cadastrar(req, res) {
     var nomeVar = req.body.nomeServer;
     var emailVar = req.body.emailServer;
     var senhaVar = req.body.senhaServer;
-    var confirmação_senhaVar = req.body.confirmação_senhaServer;
+    var confirmar_senhaVar = req.body.confirmar_senhaServer;
     var codigoVar = req.body.codigoServer;
 
     // Faça as validações dos valores
@@ -66,14 +66,14 @@ function cadastrar(req, res) {
         res.status(400).send("Seu email está undefined!");
     } else if (senhaVar == undefined) {
         res.status(400).send("Sua senha está undefined!");
-    } else if (confirmação_senhaVar == undefined) {
+    } else if (confirmar_senhaVar == undefined) {
         res.status(400).send("Sua empresa está undefined!");
     } else if (codigoVar == undefined) {
         res.status(400).send("Sua empresa está undefined!");
     } else {
 
         // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
-        usuarioModel.cadastrar(nomeVar, emailVar, senhaVar, confirmação_senhaVar,codigoVar)
+        usuarioModel.cadastrar(nomeVar, emailVar, senhaVar, confirmar_senhaVar,codigoVar)
             .then(
                 function (resultado) {
                     res.json(resultado);
