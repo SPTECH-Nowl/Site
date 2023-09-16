@@ -110,20 +110,16 @@ function enviar() {
 
     if (ctNome == "" || ctAssunto == "" || ctEmail == "" || ctComunicado == "") {
         //cardErro.style.display = "block"
-        swal("Ops", "Preencha todos os campos 😠", "error")
+        swal("Ops", "Preencha todos os campos", "error")
     }
     else if (ctNome.length < 3) {
-        swal("Ops", "O nome inserido é muito curto. Por favor, insira um nome com pelo menos 3 caracteres 😠", "warning")
+        swal("Ops", "O nome inserido é muito curto. Por favor, insira um nome com pelo menos 3 caracteres", "warning")
     }
     else if (ctEmail.indexOf("gmail") == -1 && ctEmail.indexOf("@") == -1 && ctEmail.indexOf(".") == -1 && ctEmail.length < 10) {
-        swal("Ops", "O e-mail cadastrado é inválido. insira um e-mail válido 😠", "warning")
+        swal("Ops", "O e-mail cadastrado é inválido. Insira um e-mail válido", "warning")
     }
     else {
         swal("Sua mensagem foi enviada!", "Aguarde o contato de nossa equipe no email informado.", "success");
-
-        setTimeout(() => {
-            window.location = "index.html";
-        }, 3000)
     }
 }
 

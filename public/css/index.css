@@ -64,6 +64,13 @@ header {
     background: radial-gradient(circle, rgba(83, 129, 219, 1) 0%, rgba(49, 76, 182, 1) 100%);
 }
 
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 #navbar {
     position: relative;
     width: 100%;

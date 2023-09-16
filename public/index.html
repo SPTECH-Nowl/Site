@@ -20,8 +20,29 @@
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <!-- Sweet alert-->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <!-- Sweet alert -->
-
+    
+    <!-- EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('8W_PzK0CVQE_wrObb');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // these IDs from the previous steps
+                emailjs.sendForm('nowl_sptech_', 'template_contato', this)
+                    .then(function() {
+                        console.log('SUCCESS!');
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
 </head>
 
 <body>
@@ -178,29 +199,29 @@
     <section id="fale-conosco">
         <h1 class="titulo-section select-disable">Fale Conosco</h1>
         <p>Se interessou por nosso serviços e deseja nos contatar para adquirir uma de nossas soluções ou deseja solicitar sua própria solução para negócio? Nos envie uma mensagem através do formulário abaixo!</p>
-        <div>
+        <form id="contact-form">
             <div class="fale-conosco-inputs">
                 <div class="input-field">
-                    <span class="fale-conosco-span">Nome</span>
+                    <span class="fale-conosco-span">Nome ou nome da empresa</span>
                     <div class="flex-col">
-                        <input data-aos="fade-right" data-aos-duration="700" id="input_nome" placeholder="Digite seu nome"
-                            required  onblur="validar_nome()" >
+                        <input data-aos="fade-right" data-aos-duration="700" id="input_nome" placeholder="Empresa"
+                            required  onblur="validar_nome()" name="from_name">
                         <span id="span_validar_nome"></span>
                     </div>
                 </div>
                 <div class="input-field">
                     <span class="fale-conosco-span">Assunto</span>
                     <div class="flex-col">
-                        <input data-aos="fade-right" data-aos-duration="700" id="input_assunto" placeholder="Digite o assunto" "
-                            required onblur="validar_assunto()" >
+                        <input data-aos="fade-right" data-aos-duration="700" id="input_assunto" placeholder="Orçamento para um sistema" "
+                            required onblur="validar_assunto()" name="from_subject">
                             <span id="span_validar_assunto"></span>
                     </div>
                 </div>
                 <div class="input-field">
                     <span class="fale-conosco-span">E-mail</span>
                     <div class="flex-col">
-                        <input data-aos="fade-right" data-aos-duration="700" id="input_email" placeholder="Digite seu e-mail" =
-                            required onblur="validar_email_contato()" >
+                        <input data-aos="fade-right" data-aos-duration="700" id="input_email" placeholder="contato@empresa.com" =
+                            required onblur="validar_email_contato()" name="from_email">
                             <span id="span_validar_email_contato"></span>
                     </div>
                 </div>
@@ -209,12 +230,12 @@
                 <div class="input-field">
                     <span class="fale-conosco-span">Escreva uma mensagem</span>
                     <textarea data-aos="fade-right" data-aos-duration="700" id="input_comunicado" cols="30" rows="10"
-                        placeholder="Escreva aqui!" required></textarea>
+                        placeholder="Descreva sua solicitação aqui!" required name="message"></textarea>
                 </div>
 
-                <button class="btn-fale-conosco select-disable" onclick="enviar()" id="enviar">Enviar</button>
+                <input type="submit" class="btn-fale-conosco select-disable" value="Enviar" id="enviar" onclick="enviar()">
             </div>
-        </div>
+        </form>
     </section>
     
     
