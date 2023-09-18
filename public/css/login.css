@@ -153,12 +153,13 @@ body {
 .icon{
     top: 50%;
     margin-left: 90%;
-    margin-top: -40px;
+    margin-top: -48px;
     transform: translate(-50%);
     background: url(../assets/img/Icone/olho\ ativado.png);
     background-size: cover;
-    width: 30px;
-    height: 30px;
+    color:#fff;
+    width: 42px;
+    height: 42px;
     cursor: pointer;
 }
 
@@ -168,6 +169,7 @@ body {
     margin-left: 90%;
     margin-top: -40px;
     transform: translate(-50%);
+    color: #F5F5F5;
     background-size: cover;
     width: 30px;
     height: 30px;
@@ -181,8 +183,10 @@ body {
     transform: translate(-50%);
     background: url(../assets/img/Icone/olho\ ativado.png);
     background-size: cover;
-    width: 30px;
-    height: 30px;
+    margin-top: -8px;
+    margin-left: 18px;
+    width: 42px;
+    height: 42px;
     cursor: pointer;
 }
 
@@ -204,11 +208,13 @@ body {
     position: absolute;
     right: 5px;
     top: 10px;
+    margin-top: -8px;
+    margin-left: 18px;
     transform: translate(-50%);
     background: url(../assets/img/Icone/olho\ ativado.png);
     background-size: cover;
-    width: 30px;
-    height: 30px;
+    width: 42px;
+    height: 42px;
     cursor: pointer;
 }
 

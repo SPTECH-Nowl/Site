@@ -101,7 +101,7 @@ function validar_codigo() {
     var span = document.getElementById('span_validar_codigo');
     var icon = document.getElementById('icon_codigo_input');
     
-    if (codigo.length  != ~5) {
+    if (codigo.length  != 5) {
         span.innerHTML = 'Códigos de intituição devem possuir pelo menos 5 caracteres.';
         span.classList.remove("valid");
         span.classList.add("not-valid");
