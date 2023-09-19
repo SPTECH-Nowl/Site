@@ -1,6 +1,3 @@
-
-
-
 const mostrarLogin = document.getElementById("activeLogin");
 var mostrarCadastro = document.getElementById("closeLogin");
 

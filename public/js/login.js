@@ -53,33 +53,6 @@ function confirmar_senha_cadastro(){
      
 }
 
-const password_cadastro = document.getElementById('senha_input_cadastro');
-const icon_senha_cadastro = document.getElementById('icon_senha');
-
-function showHidesenha(){
-    if(password_cadastro.type === 'senha_input_cadastro'){
-        password.setAttribute('type','text');
-        icon_senha_cadastro.classList.add('hide')
-    }
-    else{
-        password.setAttribute('type', 'password');
-        icon.classList.remove('hide')
-    }
-}
-
-const password_confirmar_cadastro = document.getElementById('conf_senha_input');
-const icon_confirmar_senha = document.getElementById('icon_confirmar');
-
-function showHideconfirmar(){
-    if(password_confirmar_cadastro.type === 'conf_senha_input'){
-        password.setAttribute('type','text');
-        icon_senha_cadastro.classList.add('hide')
-    }
-    else{
-        password.setAttribute('type', 'password');
-        icon.classList.remove('hide')
-    }
-}
 
 
 
@@ -175,7 +148,7 @@ function entrar() {
 
                     setTimeout(function () {
                         window.location = "dashboard.html";
-                    }, 3000); // apenas para exibir o loading
+                    }, 3000); 
 
                 });
 

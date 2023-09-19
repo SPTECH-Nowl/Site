@@ -122,12 +122,6 @@ function validar_codigo() {
 
 
 
-
-
-
-
-
-
 function cadastrar() {
     var nomeVar = nome_input_cadastro.value;
     var emailVar = email_input_cadastro.value;
@@ -136,9 +130,9 @@ function cadastrar() {
     var codigoVar = codigo_input.value;
 
     if (nomeVar ==""||emailVar == "" || senhaVar == ""||confirmar_senhaVar ==""|| codigoVar =="") {
-        // cardErro.style.display = "block"
+      
         swal("Ops", "Preencha os campos para logar!", "error")
-        //    finalizarAguardar();
+       
         finalizarAguardar();
         return false;
 }
@@ -185,7 +179,7 @@ else {
         console.log("resposta: ", resposta);
 
         if (resposta.ok) {
-            //cardErro.style.display = "block";
+           
             swal("Bom trabalho!", "Cadastro realizado com sucesso redirecionando a tela de login...!", "success");
 
             setTimeout(() => {
