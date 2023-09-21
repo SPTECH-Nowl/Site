@@ -8,7 +8,7 @@ nome varchar(45) not null,
 email varchar(100) unique not null,
 senha varchar(40) not null,
 confirmação_senha varchar(40) not null,
-codigo char (6) not null
+codigo VARBINARY (6) not null
 );
 
 
