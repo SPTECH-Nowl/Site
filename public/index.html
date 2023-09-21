@@ -14,10 +14,11 @@
     <script src="js/index.js"></script>
     
     <link rel="stylesheet" href="css/indexResponsividade.css">
-    
+
+    <!-- -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+
     <!-- Sweet alert-->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     
@@ -30,15 +31,17 @@
         })();
     </script>
     <script type="text/javascript">
-        window.onload = function() {
-            document.getElementById('contact-form').addEventListener('submit', function(event) {
+        window.onload = function enviar() {
+            document.getElementById('contact-form').addEventListener('submit', function enviar(event) {
                 event.preventDefault();
                 // these IDs from the previous steps
                 emailjs.sendForm('nowl_sptech_', 'template_contato', this)
-                    .then(function() {
+                    .then(function enviar() {
                         console.log('SUCCESS!');
-                    }, function(error) {
+                        swal("Párabens","Mensagem enviado com sucesso,entraremos em contato","Sucess")
+                    }, function enviar(error) {
                         console.log('FAILED...', error);
+                        swal("Warning","Aconteceu algum erro de validação da nossa parte, iremos contator o mais rápido possivel","Error")
                     });
             });
         }

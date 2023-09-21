@@ -3,13 +3,13 @@ var status = 1;
 function senha(){
 	if(status > 0){
       document.getElementById('senha_input').type='password';
-      document.getElementById("olho_login").classList.remove("icon_hide")
-      document.getElementById("olho_login").classList.add("icon")
+      document.getElementById("olho_login").classList.remove("icon")
+      document.getElementById("olho_login").classList.add("icon_hide")
       status = 0;
     }else{
     document.getElementById('senha_input').type='text';
-    document.getElementById("olho_login").classList.remove("icon")
-      document.getElementById("olho_login").classList.add("icon_hide")
+    document.getElementById("olho_login").classList.remove("icon_hide")
+      document.getElementById("olho_login").classList.add("icon")
       status = 1;
     
     }
