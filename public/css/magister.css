@@ -1,0 +1,95 @@
+body {
+    overflow-x: hidden;
+}
+
+#wrapper {
+    /* width: 100%;
+    max-width: 100%;
+    min-height: 100vh; */
+    background-color: var(--color-branco);
+    padding: 0 40px 40px;
+    padding-top: 100px;
+}
+
+#nav {
+    position: fixed;
+    top: 0;
+    z-index: 5;
+    width: 100%;
+    padding: 20px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: aqua;
+}
+
+.nav-logo-a {
+
+}
+
+.nav-logo-img {
+    width: 200px;
+}
+
+.nav-grupo {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-item {
+    color: var(--color-preto);
+    text-decoration: none;
+}
+
+.nav-btn {
+    color: var(--color-branco);
+    font-weight: bold;
+    background-color: var(--color-violeta);
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    border: none;
+}
+
+#header {
+    padding-top: 100px;
+}
+
+.head-textos {
+    max-width: 600px;
+}
+
+.head-mar {
+    height: 400px;
+}
+
+.onda {
+    width: 100vw;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.barco{
+    z-index: 2;
+    position: relative;
+    width: 100vw;
+    /* margin-left: 500px;
+    margin-top: -90px; */
+    top: -5vw;
+    /* right: -30vw; */
+    transform: rotate(-15deg);
+}
+
+.onda1 {
+    z-index: 4;
+}
+
+.onda2 {
+    z-index: 3;
+}
+
+.onda3 {
+    z-index: 2;
+}

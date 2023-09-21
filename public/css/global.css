@@ -1,5 +1,5 @@
 /* NÃO ESTÁ SENDO USADO NA INDEX NOWL */
-/* Aparente está quebrando a index, */
+/* Aparente está quebrando a index */
 
 /* Importar Fontes */
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;700&display=swap');
@@ -26,5 +26,29 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow: hidden;
+    /* overflow: hidden; */
+}
+
+.titulo {
+    font-family: 'Kanit';
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.subtitulo {
+    font-family: 'Kanit';
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.texto-k {
+    font-family: 'Kanit';
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.texto-r {
+    font-family: 'Raleway';
+    font-size: 18px;
+    font-weight: 500;
 }
