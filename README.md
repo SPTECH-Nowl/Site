@@ -1,5 +1,6 @@
 <img src="https://img.freepik.com/vetores-premium/ilustracao-em-vetor-coruja-azul-fofa-vetor-premium-do-icone-do-conceito-emoji_476839-215.jpg?w=2000"
- height="100" width="120" style="border-radius:850px;" align="center" alt="coruja" > ## Site Institucional
+ height="100" width="120" style="border-radius:850px;" align="center" alt="coruja" >  
+ # Site Institucional
 
 Site institucional da empresa, onde apresentamos quem nós somos, nossos valores e projetos. O site é composto por um cabeçalho onde damos boas vindas e também explicamos brevemente nosso intuito como empresa. Ademais, o site é separado em sessões, sendo elas: sobre nós, integrantes, projetos, fale conosco e um footer.
 
