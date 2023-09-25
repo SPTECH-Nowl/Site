@@ -59,3 +59,22 @@
     font-size: 18px;
     font-weight: 500;
 }
+
+.btn-roxo {
+    color: var(--color-branco);
+    background-color: var(--color-violeta);
+    /* font-weight: bold; */
+    padding: 10px 40px;
+    border-radius: 15px;
+    text-decoration: none;
+    border: none;
+    transition: all .25s ease-in-out;
+    box-shadow: inset -4px 4px 2px rgba(0, 0, 0, .25);
+}
+
+.btn-roxo:hover {
+    color: var(--color-violeta);
+    background-color: var(--color-branco);
+    box-shadow: inset 4px -4px 10px rgba(0, 0, 0, 0.50);
+    cursor: pointer;
+}

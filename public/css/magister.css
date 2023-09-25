@@ -44,6 +44,7 @@ body::-webkit-scrollbar-thumb {
     /* background: rgba( 255, 255, 255, 0.55 ); */
     /* background-color: aqua; */
     transition: all .25s ease-in-out;
+    border: none;
 }
 
 .nav-logo-a {
@@ -150,6 +151,12 @@ body::-webkit-scrollbar-thumb {
 
 #sobre {
     background: linear-gradient(186deg, #9747FF 8.57%, #68419C 66.57%);
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+.sobre-conteudo {
     padding: 0 75px;
     display: flex;
     align-items: center;
@@ -162,6 +169,12 @@ body::-webkit-scrollbar-thumb {
     flex-direction: column;
     gap: 10px;
     max-width: 45vw;
+}
+
+.onda-branca {
+    /* position: fixed;
+    z-index: 1; */
+    width: 100%;
 }
 
 #missoes {
@@ -207,4 +220,111 @@ body::-webkit-scrollbar-thumb {
     position: static;
     bottom: 0;
     z-index: 5;
+}
+
+#fale-aqui {
+    padding: 25px 75px;
+    background-color: var(--color-cinzaEscuro);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
+}
+
+.fale-aqui-lado {
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 35px;
+    width: 45vw;
+}
+
+.fale-aqui-textos {
+    color: var(--color-branco);    
+}
+
+.fale-aqui-rodape {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* padding-right: 25px; */
+}
+
+.fale-aqui-detalhe {
+    height: fit-content;
+}
+
+#footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo-footer {
+    background-color: var(--color-violeta);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 75px 0 25px;
+}
+
+.row-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.col-footer {
+    width: 15vw;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-item {
+    text-decoration: none;
+    color: var(--color-preto);
+    position: relative;
+    transition: all .25s ease-in-out;
+}
+
+.footer-item:hover {
+    color: var(--color-violeta);
+}
+
+.footer-item::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 3px;
+    border-radius: 20px;
+    background-color: var(--color-violeta);
+    transition: .25s ease-in-out;
+}
+
+.footer-item:hover::after {
+    width: 100%;
+}
+
+.bottom-footer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.mar-footer {
+
+}
+
+.barco-footer {
+    /* height: max-content; */
 }
