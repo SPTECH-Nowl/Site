@@ -15,7 +15,8 @@
     --color-violeta: #9747FF;
     --color-roxo: #6D499D;
     --color-roxoEscuro: #4E2F78;
-    --color-cinza: #252525;
+    --color-cinzaEscuro: #252525;
+    --color-cinza: #E3E3E3;
 
     --font-title: "Kanit";
     --font-text: "Raleway";
@@ -31,7 +32,7 @@
 
 .titulo {
     font-family: 'Kanit';
-    font-size: 50px;
+    font-size: 65px;
     font-weight: bold;
 }
 
@@ -41,10 +42,16 @@
     font-weight: bold;
 }
 
+.mini-titulo {
+    font-family: 'Kanit';
+    font-size: 25px;
+    font-weight: medium;
+}
+
 .texto-k {
     font-family: 'Kanit';
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 300;
 }
 
 .texto-r {
