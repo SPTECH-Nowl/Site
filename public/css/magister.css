@@ -116,7 +116,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .head-mar {
-    height: 400px;
+    /* height: 400px; */
 }
 
 .onda {
@@ -124,6 +124,7 @@ body::-webkit-scrollbar-thumb {
     position: absolute;
     left: 0;
     bottom: 0;
+    transition: all ease-in-out;
 }
 
 .barco {
@@ -135,22 +136,27 @@ body::-webkit-scrollbar-thumb {
     top: -5vw;
     /* right: -30vw; */
     transform: rotate(-15deg);
+    animation: 2.25s ease-in-out 1.25s infinite barco;
 }
 
 .onda1 {
+    margin-bottom: -2px;
     z-index: 4;
+    /* animation: 2s ease-in-out 1s infinite ondas; */
 }
 
 .onda2 {
     z-index: 3;
+    animation: 2.25s ease-in-out 1s infinite ondas;
 }
 
 .onda3 {
     z-index: 2;
+    animation: 2.5s ease-in-out 1s infinite ondas;
 }
 
 #sobre {
-    background: linear-gradient(186deg, #9747FF 8.57%, #68419C 66.57%);
+    background: linear-gradient(186deg, #9747FF 20%, #68419C 65%);
     /* padding: 0;
     margin: 0;
     border: none; */
@@ -353,3 +359,30 @@ body::-webkit-scrollbar-thumb {
 .barco-footer {
     /* height: max-content; */
 }
+
+@keyframes ondas {
+    0% {
+        transform: translateY(0) rotate(0deg);
+
+    } 50% {
+        transform: translateY(-35px);
+
+    } 100% {
+        transform: translateY(0) rotate(0deg);
+
+    }
+}
+
+@keyframes barco {
+    0% {
+        transform: translateY(0) rotate(-15deg);
+
+    } 50% {
+        transform: translateY(-35px) rotate(-15deg);
+
+    } 100% {
+        transform: translateY(0) rotate(-15deg);
+
+    }
+}
+
