@@ -5,7 +5,7 @@ html {
 
 body {
     overflow-x: hidden;
-}  
+}
 
 body::-webkit-scrollbar {
     width: 5px;
@@ -35,6 +35,8 @@ body::-webkit-scrollbar-thumb {
 #nav {
     position: fixed;
     top: 0;
+    left: 30%;
+    transform: translateX(-30%);
     z-index: 5;
     width: 100%;
     padding: 20px 75px;
@@ -47,9 +49,7 @@ body::-webkit-scrollbar-thumb {
     border: none;
 }
 
-.nav-logo-a {
-
-}
+.nav-logo-a {}
 
 .nav-logo-img {
     width: 200px;
@@ -126,7 +126,7 @@ body::-webkit-scrollbar-thumb {
     bottom: 0;
 }
 
-.barco{
+.barco {
     z-index: 2;
     position: relative;
     width: 100vw;
@@ -151,9 +151,12 @@ body::-webkit-scrollbar-thumb {
 
 #sobre {
     background: linear-gradient(186deg, #9747FF 8.57%, #68419C 66.57%);
-    padding: 0;
+    /* padding: 0;
     margin: 0;
-    border: none;
+    border: none; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .sobre-conteudo {
@@ -195,7 +198,10 @@ body::-webkit-scrollbar-thumb {
 
 .card {
     border-radius: 10px;
-    background-color: var(--color-cinza);
+    background-color: var(--color-branco);
+    background-image: url(../assets/img/elements/cards-gradient-bg.png);
+    /* opacity: .5; */
+
     max-width: 300px;
     max-height: 450px;
     display: flex;
@@ -205,9 +211,26 @@ body::-webkit-scrollbar-thumb {
     /* gap: 10px; */
 }
 
-.card-img {
+/* .card * {
+    opacity: 2;
+} */
+
+.card-img-div {
+    background-image: url(../assets/img/iluminacao.png);
+    background-position: center;
+    /* background-position: border-box; */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: none;
     transform: translateY(-35px);
+    width: 300px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+.card-img {}
 
 .card-textos {
     padding: 0 25px;
@@ -219,7 +242,7 @@ body::-webkit-scrollbar-thumb {
 .onda-card {
     position: static;
     bottom: 0;
-    z-index: 5;
+    z-index: 4;
 }
 
 #fale-aqui {
@@ -241,7 +264,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .fale-aqui-textos {
-    color: var(--color-branco);    
+    color: var(--color-branco);
 }
 
 .fale-aqui-rodape {
@@ -270,6 +293,7 @@ body::-webkit-scrollbar-thumb {
 .info-footer {
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: space-between;
     align-items: center;
     padding: 75px 0 25px;
@@ -322,7 +346,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 .mar-footer {
-
+    display: flex;
+    align-items: end;
 }
 
 .barco-footer {
