@@ -49,8 +49,6 @@ body::-webkit-scrollbar-thumb {
     border: none;
 }
 
-.nav-logo-a {}
-
 .nav-logo-img {
     width: 200px;
 }
@@ -108,7 +106,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 #header {
-    padding: 100px 75px 0;
+    padding: 50px 75px 0;
 }
 
 .head-textos {
@@ -143,6 +141,10 @@ body::-webkit-scrollbar-thumb {
     margin-bottom: -2px;
     z-index: 4;
     /* animation: 2s ease-in-out 1s infinite ondas; */
+}
+
+.onda1Branca{
+    display: none;
 }
 
 .onda2 {
@@ -180,10 +182,17 @@ body::-webkit-scrollbar-thumb {
     max-width: 45vw;
 }
 
+.sobre-img-responsivo{
+    display: none;
+}
+
 .onda-branca {
-    /* position: fixed;
-    z-index: 1; */
     width: 100%;
+}
+
+.onda-roxa {
+    width: 100%;
+    display: none;
 }
 
 #missoes {
@@ -203,18 +212,18 @@ body::-webkit-scrollbar-thumb {
 }
 
 .card {
-    border-radius: 10px;
+    border-radius: 20px;
     background-color: var(--color-branco);
     background-image: url(../assets/img/elements/cards-gradient-bg.png);
-    /* opacity: .5; */
+    background-size: cover;
 
     max-width: 300px;
-    max-height: 450px;
+    max-height: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    /* gap: 10px; */
+
 }
 
 /* .card * {
@@ -236,7 +245,9 @@ body::-webkit-scrollbar-thumb {
     justify-content: center;
 }
 
-.card-img {}
+.card-img {
+    height: 11rem;
+}
 
 .card-textos {
     padding: 0 25px;
@@ -258,6 +269,10 @@ body::-webkit-scrollbar-thumb {
     align-items: center;
     justify-content: space-between;
     gap: 35px;
+}
+
+.fale-aqui-img-responsividade{
+    display: none;
 }
 
 .fale-aqui-lado {
@@ -294,6 +309,10 @@ body::-webkit-scrollbar-thumb {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.logo-footer-img-responsividade{
+    display: none;
 }
 
 .info-footer {
