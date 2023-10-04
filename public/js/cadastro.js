@@ -101,7 +101,7 @@ function validar_codigo() {
     var span = document.getElementById('span_validar_codigo');
     var icon = document.getElementById('icon_codigo_input');
     
-    if (codigo.length  != 5) {
+    if (codigo.length  < 5) {
         span.innerHTML = 'Códigos de intituição devem possuir pelo menos 5 caracteres.';
         span.classList.remove("valid");
         span.classList.add("not-valid");
@@ -131,34 +131,21 @@ function cadastrar() {
 
     if (nomeVar ==""||emailVar == "" || senhaVar == ""||confirmar_senhaVar ==""|| codigoVar =="") {
       
-        swal("Ops", "Preencha os campos para logar!", "error")
-       
-        finalizarAguardar();
+        validar_nome_cadastro()
+        validar_codigo()
+        validar_conf_senha_cadastro()
+        validar_email_cadastro()
+        validar_senha_cadastro()
+
+
         return false;
-}
-else if (nomeVar.length < 3) {
-    swal("Ops", "O nome inserido é muito curto. Insira um nome com pelo menos 3 caracteres", "warning")
-}
-else if (emailVar.indexOf("@") == -1 || emailVar.indexOf(".com") == -1 || emailVar.length < 7) {
-    swal("Ops", "O e-mail cadastrado é inválido. Insira um e-mail válido.", "warning")
-}
-else if (senhaVar.length < 8) {
-    swal("Ops", "A senha inserida é muito curta. Isira uma senha com pelo menos 8 caracteres.", "warning")
-}
-else if (confirmar_senhaVar != senhaVar) {
-    swal("Ops", "As senhas não coincidem", "warning")
-}
-else if (codigoVar != 5) {
-    swal("Ops", "Codigo inválido, apenas 5 caracteres.", "warning")
-}
-else {
+} else {
 
         setInterval('...', 5000)
     }
     console.log("FORM NOME: ", nomeVar);
     console.log("FORM EMAIL: ", emailVar);
     console.log("FORM SENHA: ", senhaVar);
-    console.log("FORM CONFIRMAR-SENHA: ", confirmar_senhaVar);
     console.log("FORM CODIGO: ", codigoVar);
 
 
@@ -171,7 +158,6 @@ else {
             nomeServer: nomeVar,
             emailServer: emailVar,
             senhaServer: senhaVar,
-            confirmar_senhaServer: confirmar_senhaVar,
             codigoServer: codigoVar
         })
     }).then(function (resposta) {
